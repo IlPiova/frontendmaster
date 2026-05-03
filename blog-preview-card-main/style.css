@@ -54,7 +54,7 @@ body {
                 font-size: 24px;
             }
 
-            .title:hover {
+            .title:hover, .title:active, .title:focus {
                 color: hsl(47, 88%, 63%);
                 cursor: pointer;
             }
