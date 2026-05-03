@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(47, 88%, 63%);
+    min-height: 100vh;
+    max-width: 100%;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 24px;
+        background-color: white;
+        width: 384px;
+        height: fit-content;
+        border-radius: 20px;
+        box-shadow: 8px 8px 0 0 black;
+
+        img {
+            border-radius: 10px;
+        }
+
+        .contents {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 12px;
+
+            .badge {
+                background-color: hsl(47, 88%, 63%);
+                width: min-content;
+                padding: 4px 12px;
+                border-radius: 4px;
+            }
+
+            .title {
+                font-weight: 800;
+                font-size: 24px;
+            }
+
+            .title:hover {
+                color: hsl(47, 88%, 63%);
+                cursor: pointer;
+            }
+
+            .text {
+                color: hsl(0, 0%, 42%);
+            }
+        }
+
+        .author {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-start;
+            align-items: center;
+
+            >img {
+                width: 32px;
+                height: 32px;
+            }
+
+            >p {
+                font-weight: 800;
+            }
+        }
+    }
+}
+
+
+.attribution {
+
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    font-size: inherit;
+
+}
+
+@media screen and (width<400px) {
+    body {
+
+        .container {
+            width: 327px;
+
+            img {
+                width: 287px;
+                height: auto;
+            }
+
+            .contents {
+
+                .badge {
+                    font-size: 12px;
+                }
+
+                .date {
+                    font-size: 12px;
+                }
+
+                .title {
+                    font-size: 20px;
+                }
+
+                .text {
+                    font-size: 14px
+                }
+            }
+
+            .author {
+                >p {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .attribution {
+            font-size: 12px;
+        }
+
+
+    }
+}
