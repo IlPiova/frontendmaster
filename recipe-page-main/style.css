@@ -31,6 +31,7 @@
 
 
 
+
  h1, h2 {
      font-family: "Young Serif", serif;
      font-weight: 400;
@@ -79,7 +80,7 @@
      display: flex;
      flex-direction: column;
      justify-content: center;
-     gap: 12px;
+     gap: .8rem;
  }
 
  .info-box {
@@ -146,14 +147,16 @@
      text-decoration: none;
  }
 
- @media screen and (width>375px) {
+ @media screen and (width>1023px) {
      body {
          background-color: var(--bg-color);
          width: 100%;
          align-items: center;
      }
 
-     article {
+
+
+     main {
          background-color: var(--article-bg-color);
          width: 60%;
          border-radius: 1.2rem;
