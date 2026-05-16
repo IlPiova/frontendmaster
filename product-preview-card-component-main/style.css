@@ -57,8 +57,8 @@ body {
 }
 
 .product-image {
-    width: 100%;
-    object-fit: contain;
+    max-inline-size: 100%;
+    block-size: auto;
     border-top-right-radius: 1em;
     border-top-left-radius: 1em;
 }
@@ -137,8 +137,6 @@ body {
         width: fit-content;
 
         .product-image {
-            min-height: max-content;
-            object-fit: cover;
             border-top-right-radius: 0;
             border-top-left-radius: 1em;
             border-bottom-left-radius: 1em;
