@@ -64,28 +64,6 @@ main {
     gap: .2em;
     background-color: var(--background-color);
 
-    #supervisor {
-        border-top: var(--accent-color1) solid 5px;
-
-
-    }
-
-    #team-builder {
-        border-top: var(--accent-color2) solid 5px;
-
-    }
-
-    #karma {
-        border-top: var(--accent-color3) solid 5px;
-
-    }
-
-    #calculator {
-        border-top: var(--accent-color4) solid 5px;
-
-
-    }
-
     h2 {
         font: var(--bold-title);
         color: var(--text-color2)
@@ -99,6 +77,28 @@ main {
         margin-block-start: 1em;
         align-self: flex-end;
     }
+}
+
+#supervisor {
+    border-top: var(--accent-color1) solid 5px;
+
+
+}
+
+#team-builder {
+    border-top: var(--accent-color2) solid 5px;
+
+}
+
+#karma {
+    border-top: var(--accent-color3) solid 5px;
+
+}
+
+#calculator {
+    border-top: var(--accent-color4) solid 5px;
+
+
 }
 
 @media screen and (720px<width<1020px) {
@@ -125,7 +125,7 @@ main {
 
     #supervisor {
         grid-column: 1/2;
-        grid-row: span 2;
+        grid-row: 1 / span 2;
         align-self: center;
 
     }
@@ -142,7 +142,7 @@ main {
 
     #calculator {
         grid-column: 3/4;
-        grid-row: span 2;
+        grid-row: 1 / span 2;
         align-self: center;
 
     }

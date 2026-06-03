@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [GitHub Repository](https://github.com/IlPiova/frontendmaster/tree/main/four-card-feature-section-master)
+- [Live site](https://frontendmentor-fourcardproject.netlify.app)
 
 ## My process
 
