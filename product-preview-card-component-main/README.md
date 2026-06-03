@@ -53,7 +53,7 @@ Naturally, my image sizing issues aren't fully resolved yet. I'll continue to lo
 
 ### AI Collaboration
 
-- Gemini Flash & Gemini Flash
+- Gemini Flash & Gemini Pro
 
 I turned to Gemini to get out of the image optimization rabbit hole. I asked it to help me identify the issue and solve it on my own, rather than just handing me the answer. It worked after some iterations.
 

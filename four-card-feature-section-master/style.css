@@ -1,0 +1,149 @@
+:root {
+    --background-color: white;
+
+    --text-color: hsl(212, 6%, 44%);
+    --text-color2: hsl(234, 12%, 34%);
+    --accent-color1: hsl(180, 62%, 55%);
+    --accent-color2: hsl(0, 78%, 62%);
+    --accent-color3: hsl(34, 97%, 64%);
+    --accent-color4: hsl(212, 86%, 64%);
+
+    --title: 200 1.5em "Poppins", sans-serif;
+    --bold-title: 600 1.2em "Poppins", sans-serif;
+    --text: 200 0.9em "Poppins", sans-serif;
+    --bold-text: 400 0.9em "Poppins", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    margin: 2em;
+    font: var(--text);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5em;
+    background-color: var(--background-color);
+}
+
+.title {
+    font: var(--title);
+    text-align: center;
+
+
+    span {
+        font: var(--bold-title);
+        color: var(--text-color2)
+    }
+}
+
+.introduction {
+    font: var(--bold-text);
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2em;
+    margin-block-end: 2em;
+}
+
+.card {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: .5em;
+    box-shadow: 0px 10px 30px -5px rgb(76, 78, 97, 0.30);
+    gap: .2em;
+    background-color: var(--background-color);
+
+    #supervisor {
+        border-top: var(--accent-color1) solid 5px;
+
+
+    }
+
+    #team-builder {
+        border-top: var(--accent-color2) solid 5px;
+
+    }
+
+    #karma {
+        border-top: var(--accent-color3) solid 5px;
+
+    }
+
+    #calculator {
+        border-top: var(--accent-color4) solid 5px;
+
+
+    }
+
+    h2 {
+        font: var(--bold-title);
+        color: var(--text-color2)
+    }
+
+    p {
+        font: var(--text);
+    }
+
+    img {
+        margin-block-start: 1em;
+        align-self: flex-end;
+    }
+}
+
+@media screen and (720px<width<1020px) {
+    header {
+        inline-size: 50%;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+}
+
+@media screen and (width>1020px) {
+    header {
+        inline-size: 25%;
+    }
+
+    main {
+        inline-size: 60%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #supervisor {
+        grid-column: 1/2;
+        grid-row: span 2;
+        align-self: center;
+
+    }
+
+    #team-builder {
+        grid-column: 2/3;
+
+    }
+
+    #karma {
+        grid-column: 2/3;
+
+    }
+
+    #calculator {
+        grid-column: 3/4;
+        grid-row: span 2;
+        align-self: center;
+
+    }
+}
