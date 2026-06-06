@@ -1,0 +1,224 @@
+:root {
+    /* BG Colors */
+    --head-bg: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    --circle-bg: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+
+    /* Results colors */
+    --reaction-color: hsl(0, 100%, 67%);
+    --reaction-bg-color: hsla(0, 100%, 67%, 0.2);
+    --memory-color: hsl(39, 100%, 56%);
+    --memory-bg-color: hsla(39, 100%, 56%, 0.2);
+    --verbal-color: hsl(166, 100%, 37%);
+    --verbal-bg-color: hsla(166, 100%, 37%, 0.2);
+    --visual-color: hsl(234, 85%, 45%);
+    --visual-bg-color: hsla(234, 85%, 45%, 0.2);
+
+    /* Neutral colors */
+    --card-bg-color: hsl(0, 0%, 100%);
+    --body-bg-color: hsl(221, 100%, 96%);
+
+    /* Text variables */
+    --text: 500 1.2rem "Hanken Grotesk", sans-serif;
+    --text-medium: 700 1.8rem "Hanken Grotesk", sans-serif;
+    --important-text: 800 2rem "Hanken Grotesk", sans-serif;
+    --text-color: hsl(241, 100%, 89%);
+    --important-text-color: hsl(224, 30%, 27%);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--body-bg-color);
+}
+
+.header {
+    background-image: var(--head-bg);
+    width: 100%;
+    height: fit-content;
+    border-end-start-radius: 2rem;
+    border-end-end-radius: 2rem;
+    padding-block: 2rem;
+    padding-inline: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.2rem;
+
+
+    .text {
+        width: 55%;
+        font: var(--text);
+        color: var(--text-color);
+        text-align: center;
+
+    }
+
+    .result {
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        background-image: var(--circle-bg);
+        color: white;
+
+        font: var(--important-text);
+        font-size: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+
+        span {
+            font-size: 1.2rem;
+            font: var(--text);
+            color: var(--text-color);
+        }
+
+
+
+    }
+
+    .result-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        .result-grade {
+            font: var(--text-medium);
+            color: white;
+        }
+    }
+}
+
+.summary-container {
+    width: 100%;
+    padding-inline: 1.2em;
+    margin-block: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1.2rem;
+
+    .summary-title {
+        font: var(--important-text);
+        color: var(--important-text-color);
+    }
+
+    .stats-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: .8em;
+        font: var(--text);
+        padding: .5em;
+        border-radius: .5em;
+
+        .single-result {
+            margin-inline-start: auto;
+            color: var(--important-text-color);
+            font: var(--text-medium);
+            font-size: 1em;
+        }
+
+        span {
+            color: grey;
+        }
+    }
+
+    #container-1 {
+        background-color: var(--reaction-bg-color);
+        color: var(--reaction-color);
+    }
+
+    #container-2 {
+        background-color: var(--memory-bg-color);
+        color: var(--memory-color);
+    }
+
+    #container-3 {
+        background-color: var(--verbal-bg-color);
+        color: var(--verbal-color);
+    }
+
+    #container-4 {
+        background-color: var(--visual-bg-color);
+        color: var(--visual-color);
+    }
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+}
+
+button {
+    width: 100%;
+    padding-block: 1em;
+    border-radius: 2em;
+    background-color: var(--important-text-color);
+    font: var(--text);
+    color: white;
+    border: none
+}
+
+.attribution {
+    text-align: center;
+    font: var(--text);
+    font-size: 0.6875rem;
+
+}
+
+.attribution a {
+    color: hsla(256, 72%, 46%, 1);
+    text-decoration: none;
+}
+
+@media screen and (width>720px) {
+    body {
+        justify-content: center;
+    }
+
+    main {
+        width: 45%;
+        display: flex;
+        justify-self: center;
+        background-color: var(--card-bg-color);
+        border-radius: 2rem;
+        margin-block-end: 2em;
+
+        .header {
+            border-radius: 2rem;
+            height: 100%;
+        }
+
+        .summary-container {
+            height: inherit;
+
+            .button-container {
+                button:focus, button:hover, button:active {
+                    background: var(--head-bg);
+                    cursor: pointer;
+                    outline: none;
+
+                }
+            }
+        }
+    }
+}

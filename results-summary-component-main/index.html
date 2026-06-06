@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <!-- Font preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main>
+      <section class="header">
+        <p class="text">Your Result</p>
+        <div class="result">
+          76 <span class="secondary-result">of 100</span>
+        </div>
+        <div class="result-description">
+          <h2 class="result-grade">Great</h2>
+          <p class="text">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+      </section>
+      <section class="summary-container">
+        <h3 class="summary-title">Summary</h3>
+        <div class="stats-container" id="container-1">
+          <img src="./images/icon-reaction.svg" alt="" />
+          <p class="stats-name">Reaction</p>
+          <p class="single-result">80 <span>/100</span></p>
+        </div>
+        <div class="stats-container" id="container-2">
+          <img src="./images/icon-memory.svg" alt="" />
+          <p class="stats-name">Memory</p>
+          <p class="single-result">92 <span>/100</span></p>
+        </div>
+        <div class="stats-container" id="container-3">
+          <img src="./images/icon-verbal.svg" alt="" />
+          <p class="stats-name">Verbal</p>
+          <p class="single-result">61 <span>/100</span></p>
+        </div>
+        <div class="stats-container" id="container-4">
+          <img src="./images/icon-visual.svg" alt="" />
+          <p class="stats-name">Visual</p>
+          <p class="single-result">72 <span>/100</span></p>
+        </div>
+        <div class="button-container">
+          <button type="button">Continue</button>
+        </div>
+      </section>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/IlPiova">Cristian Piovani</a>.
+    </footer>
+  </body>
+</html>
