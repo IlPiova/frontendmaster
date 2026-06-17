@@ -1,5 +1,5 @@
 :root {
-    /*   */
+
     --title: 500 2.5rem "DM Sans", sans-serif;
     --text: 400 1rem "DM Sans", sans-serif;
 
@@ -18,13 +18,13 @@
 }
 
 body {
-    width: 100%;
-    height: fit-content;
+    inline-size: 100%;
+    block-size: fit-content;
     background-color: hsl(0, 0%, 96%);
 }
 
 main {
-    width: 100%;
+    inline-size: 100%;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -57,7 +57,7 @@ p {
 }
 
 img {
-    width: 100%;
+    inline-size: 100%;
 }
 
 #card-1 {
@@ -79,7 +79,7 @@ img {
     background-color: var(--light-color);
 
     img {
-        background: inheriit;
+        background: inherit;
     }
 }
 
@@ -114,7 +114,7 @@ img {
     background-color: var(--light-color);
 
     img {
-        width: 70%;
+        inline-size: 70%;
     }
 }
 
@@ -139,7 +139,7 @@ img {
     }
 
     img {
-        width: 70%;
+        inline-size: 70%;
         align-self: flex-start;
     }
 }
@@ -163,7 +163,7 @@ img {
 
     body {
         padding: 1.5rem;
-        max-height: 100vh;
+        block-size: 100vh;
     }
 
 
@@ -189,7 +189,7 @@ img {
         grid-template-rows: repeat(6, 15%);
         gap: 1rem;
         align-items: center;
-        max-height: inherit;
+        block-size: inherit;
     }
 
     .card {
@@ -204,7 +204,7 @@ img {
         gap: 0;
 
         img {
-            width: 35%;
+            inline-size: 35%;
             margin-block-start: 1rem;
         }
     }
@@ -220,11 +220,12 @@ img {
 
         h2 {
             align-self: flex-start;
-            width: 70%;
+            inline-size: 70%;
         }
 
         img {
-            margin-inline-start: 70%;
+            inline-size: 150%;
+            align-self: flex-start;
         }
     }
 
@@ -238,13 +239,8 @@ img {
         h2 {
             text-align: start;
             align-self: flex-start;
-            width: 60%;
+            inline-size: 60%;
         }
-
-
-        /* img {
-        margin-block-start: 10%;
-    } */
     }
 
     #card-4 {
@@ -272,7 +268,7 @@ img {
         align-items: center;
 
         h2 {
-            width: 70%;
+            inline-size: 70%;
             font-size: 2rem;
             text-align: start;
         }
@@ -302,6 +298,10 @@ img {
         justify-content: flex-start;
         align-items: center;
 
+        h2 {
+            inline-size: 70%;
+            align-self: flex-start;
+        }
     }
 
     #card-8 {
@@ -310,6 +310,12 @@ img {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+
+        h2 {
+            inline-size: 70%;
+            align-self: flex-start;
+
+        }
 
         img {
             inline-size: 90%;
