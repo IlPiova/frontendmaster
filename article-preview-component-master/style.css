@@ -1,0 +1,213 @@
+@font-face {
+    font-family: "Manrope";
+    src: url("fonts/Manrope-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("fonts/Manrope-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+}
+
+:root {
+    --title: 700 1.2rem "Manrope", sans-serif;
+    --text: 500 .8rem "Manrope", sans-serif;
+
+    --title-color: hsl(217, 19%, 35%);
+    --text-color: hsl(214, 17%, 51%);
+    --button-bg-color: hsl(212, 23%, 69%);
+    --bg-color: hsl(210, 46%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+p {
+    font: var(--text);
+    color: var(--text-color);
+}
+
+h1 {
+    font: var(--title);
+    color: var(--text-color);
+}
+
+body {
+    inline-size: 100%;
+    min-block-size: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(1rem, 2rem, 20rem);
+    ;
+    background-color: var(--bg-color);
+    gap: 2rem;
+
+}
+
+.card {
+    background-color: white;
+    inline-size: 100%;
+    max-inline-size: fit-content;
+    block-size: fit-content;
+    border-radius: .8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+
+
+    .card-image {
+        inline-size: 100%;
+        height: auto;
+        border-top-left-radius: .8rem;
+        border-top-right-radius: .8rem;
+    }
+}
+
+.card-body {
+    padding: 2rem;
+    padding-block-end: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+.author {
+    inline-size: 100%;
+    display: flex;
+    justify-content: spaxeb;
+    align-items: center;
+    gap: 1rem;
+
+
+    img {
+        border-radius: 50%;
+        inline-size: 10%;
+        height: auto;
+    }
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    inline-size: 100%;
+
+    .name {
+        font-weight: 700;
+        color: var(--text-color);
+    }
+}
+
+.share-button {
+    inline-size: 5rem;
+    height: auto;
+    padding: .2rem;
+    clip-path: circle();
+    background-color: var(--bg-color);
+    border: none;
+    margin: 0;
+    justify-self: flex-end;
+    cursor: pointer;
+
+
+    img {
+        width: 50%;
+    }
+}
+
+.share-container {
+    background-color: var(--title-color);
+    inline-size: 100%;
+    height: auto;
+    padding: 1rem;
+    z-index: 1;
+    justify-self: flex-end;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    letter-spacing: .5rem;
+    border-bottom-left-radius: .8rem;
+    border-bottom-right-radius: .8rem;
+
+    .share-button {
+        inline-size: 3rem;
+        height: auto;
+        cursor: pointer;
+    }
+}
+
+.display {
+    display: none;
+}
+
+@media screen and (width>=720px) {
+    body {
+        block-size: 100vh;
+        min-block-size: auto;
+        padding-block-start: 2rem;
+    }
+
+    .card {
+        flex-direction: row;
+        max-inline-size: 70%;
+        margin-block-start: 2rem;
+
+        .card-image {
+            inline-size: 40%;
+            block-size: 100%;
+            object-fit: cover;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: .8rem;
+        }
+
+        .author {
+            .share-button {
+                position: relative;
+            }
+        }
+    }
+
+
+
+    .share-container {
+        position: absolute;
+        right: 50%;
+        background-color: var(--title-color);
+        inline-size: fit-content;
+        padding: .5rem;
+        gap: .5rem;
+        border-radius: .3rem;
+
+        .share-button {
+            display: none;
+        }
+
+        img {
+            width: 15px;
+            height: auto;
+        }
+
+        P {
+            font-size: .5rem;
+        }
+    }
+}
