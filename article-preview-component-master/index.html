@@ -16,7 +16,7 @@
     <title>Frontend Mentor | Article preview component</title>
   </head>
   <body>
-    <main class="card">
+    <article class="card">
       <img
         class="card-image"
         src="./images/drawers.jpg"
@@ -47,38 +47,20 @@
             <p class="name">Michelle Appleton</p>
             <p class="date">28 Jun 2020</p>
           </div>
-          <button type="button" class="share-button">
+          <button type="button" class="share-button" id="share-button">
             <img src="./images/icon-share.svg" alt="share arrow image" />
           </button>
+          <section class="share-container display">
+            <p>SHARE</p>
+            <img src="./images/icon-facebook.svg" alt="" /><img
+              src="./images/icon-twitter.svg"
+              alt=""
+            /><img src="./images/icon-pinterest.svg" alt="" />
+          </section>
         </section>
       </section>
-      <section class="share-container display">
-        <p>SHARE</p>
-        <img
-          src="/article-preview-component-master/images/icon-facebook.svg"
-          alt=""
-        /><img
-          src="/article-preview-component-master/images/icon-twitter.svg"
-          alt=""
-        /><img
-          src="/article-preview-component-master/images/icon-pinterest.svg"
-          alt=""
-        />
-        <button type="button" class="share-button">
-          <img
-            src="/article-preview-component-master/images/icon-share.svg"
-            alt="share arrow image"
-          />
-        </button>
-      </section>
-    </main>
+    </article>
 
-    <!-- <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="https://github.com/IlPiova">Cristian Piovani</a>.
-    </footer> -->
-
-    <script src="/article-preview-component-master/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

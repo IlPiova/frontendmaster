@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- [Github repository](article-preview-component-master)
+- [Github repository](https://github.com/IlPiova/frontendmaster/tree/main/article-preview-component-master)
 - [Live site](https://fementor-articlecomponentproject.netlify.app)
 
 ## My process
