@@ -166,7 +166,7 @@ body {
     display: none;
 }
 
-@media screen and (width>=720px) {
+@media screen and (width>=860px) {
     body {
         block-size: 100vh;
         min-block-size: auto;
@@ -179,30 +179,28 @@ body {
         margin-block-start: 2rem;
 
         .card-image {
-            inline-size: clamp(40%, 40%, 60%);
+            min-inline-size: 50%;
             block-size: 100%;
             object-fit: cover;
             border-top-right-radius: 0;
             border-bottom-left-radius: .8rem;
         }
 
-        .author {
-            .share-button {
-                position: relative;
-            }
-        }
+
     }
 
-    .share-button {
+
+
+    .tooltip-container {
         position: relative;
+
     }
-
-
 
     .share-container {
         position: absolute;
-        left: 75%;
-        bottom: 55%;
+        left: 50%;
+        bottom: 100%;
+        transform: translateX(-50%) translateY(-0.5rem);
         background-color: var(--title-color);
         inline-size: fit-content;
         padding: .5rem;
