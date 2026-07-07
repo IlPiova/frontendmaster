@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <!-- Sign-up form start -->
+    <main class="card">
+      <section class="image-container">
+        <picture>
+          <source
+            type="image/svg+xml"
+            media="(min-width: 1080px)"
+            srcset="./assets/images/illustration-sign-up-desktop.svg"
+          />
+          <source
+            type="svg"
+            media="(min-width: 720px)"
+            srcset="./assets/images/illustration-sign-up-tablet.svg"
+          />
+          <img
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            alt=""
+            class="header-image"
+          />
+        </picture>
+      </section>
+      <article class="general-container">
+        <h1 class="title">Stay updated!</h1>
+        <p class="description">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <div class="list-container">
+          <div class="list-item">
+            <img src="./assets/images/icon-list.svg" alt="" />
+            <p>Product discovery and building what matters</p>
+          </div>
+          <div class="list-item">
+            <img src="./assets/images/icon-list.svg" alt="" />
+            <p>Measuring to ensure updates are a success</p>
+          </div>
+          <div class="list-item">
+            <img src="./assets/images/icon-list.svg" alt="" />
+            <p>And much more!</p>
+          </div>
+        </div>
+        <form class="form">
+          <label for="email" class="input-label"> Email address </label>
+          <input
+            type="email"
+            name="email"
+            id="email-input"
+            class="input-field"
+            placeholder="email@company.com"
+          />
+          <button type="submit" class="button-style" id="submit-button">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </article>
+    </main>
+    <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+    <section class="success-message display">
+      <img src="./assets/images/icon-success.svg" alt="" />
+      <h1 class="title">Thanks for subscribing!</h1>
+      <p class="description">
+        A confirmation email has been sent to
+        <span class="user-email" id="user-email">ash@loremcompany</span> .com.
+        Please open it and click the button inside to confirm your subscription.
+        <button class="button-style">Dismiss message</button>
+      </p>
+    </section>
+
+    <!-- Success message end -->
+  </body>
+</html>
