@@ -66,7 +66,7 @@
             <p>And much more!</p>
           </div>
         </div>
-        <form class="form">
+        <form class="form" id="form" novalidate>
           <label for="email" class="input-label"> Email address </label>
           <input
             type="email"
@@ -74,6 +74,7 @@
             id="email-input"
             class="input-field"
             placeholder="email@company.com"
+            required
           />
           <button type="submit" class="button-style" id="submit-button">
             Subscribe to monthly newsletter
@@ -84,17 +85,23 @@
     <!-- Sign-up form end -->
 
     <!-- Success message start -->
-    <section class="success-message display">
-      <img src="./assets/images/icon-success.svg" alt="" />
-      <h1 class="title">Thanks for subscribing!</h1>
-      <p class="description">
-        A confirmation email has been sent to
-        <span class="user-email" id="user-email">ash@loremcompany</span> .com.
-        Please open it and click the button inside to confirm your subscription.
-        <button class="button-style">Dismiss message</button>
-      </p>
+    <section id="success-message" class="success-message display">
+      <div class="success-card-container">
+        <img src="./assets/images/icon-success.svg" alt="" />
+        <h1 class="title">Thanks for subscribing!</h1>
+        <p class="description">
+          A confirmation email has been sent to
+          <span class="user-email" id="user-email"></span> .com. Please open it
+          and click the button inside to confirm your subscription.
+        </p>
+        <button class="button-style" id="dismiss-button">
+          Dismiss message
+        </button>
+      </div>
     </section>
 
     <!-- Success message end -->
+
+    <script src="./script.js"></script>
   </body>
 </html>

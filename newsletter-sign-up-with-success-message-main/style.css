@@ -113,6 +113,7 @@ body {
     padding: 1rem;
     margin-block-start: .8rem;
     border-radius: 10Px;
+    outline: none;
 }
 
 .success-message {
@@ -189,5 +190,29 @@ body {
         justify-content: center;
         align-items: flex-start;
         gap: .8rem;
+    }
+
+    .button-style {
+        border: none;
+    }
+
+    .button-style:hover, .button-style:active, .button-style:focus {
+
+        background: linear-gradient(to right, hsl(4, 100%, 67%), hsl(22, 90%, 61%));
+    }
+
+    .success-message {
+        background-color: var(--secondary-color);
+        align-items: center;
+
+        .success-card-container {
+            inline-size: 50%;
+            block-size: fit-content;
+            background-color: var(--bg-color);
+            padding: 3rem;
+            border-radius: 20px;
+        }
+
+
     }
 }
