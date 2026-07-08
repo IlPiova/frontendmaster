@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Github repository](https://github.com/IlPiova/frontendmaster/tree/main/newsletter-sign-up-with-success-message-main)
+- [Live site](https://fementor-newslettersignup.netlify.app)
 
 ## My process
 
