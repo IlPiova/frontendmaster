@@ -1,10 +1,9 @@
-//posso trovare un uguaglianza tra il titolo e il titolo nel json, in modo da non dover selezionare singolarmente ogni card
-const timeSpanSelection = document.querySelector(".timestamp-selection");
+const timeSpanSelection = document.querySelector(".timespan-selection");
 const cards = document.querySelectorAll(".inner-card");
 let fetchedData;
+let timeSpan = "daily";
 
 // Obtaining time span fo data
-let timeSpan = "daily";
 
 timeSpanSelection.addEventListener("click", function (e) {
   timeSpan = e.target.id;
@@ -36,7 +35,17 @@ function dataInsert(data) {
 function cardConstructor(data, card) {
   const cardCurrentScore = card.querySelector(".time-score");
   const cardLastScore = card.querySelector(".last-score");
-
-  cardCurrentScore.innerText = data.timeframes[timeSpan].current;
-  cardLastScore.innerText = data.timeframes[timeSpan].previous;
+  // Choose right centence based on time span
+  let str = () => {
+    switch (timeSpan) {
+      case "daily":
+        return "Yesterday - ";
+      case "weekly":
+        return "Last week - ";
+      case "monthly":
+        return "Last month - ";
+    }
+  };
+  cardCurrentScore.innerHTML = `${data.timeframes[timeSpan].current}hrs`;
+  cardLastScore.innerHTML = `${str()}${data.timeframes[timeSpan].previous}hrs`;
 }

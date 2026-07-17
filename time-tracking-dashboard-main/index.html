@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="icon"
@@ -15,18 +21,20 @@
     <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
   <body>
-    <main>
+    <main class="main-section">
       <section class="profile-section">
         <div class="light-section">
           <img src="./images/image-jeremy.png" alt="profile-image" />
-          <p class="secondary-text">Report for</p>
-          <div class="profile-info">
-            <p class="user-info">Jeremy</p>
-            <p class="user-info">Robson</p>
+          <div class="profile-info-container">
+            <p class="secondary-text">Report for</p>
+            <div class="profile-info">
+              <p class="user-info">Jeremy</p>
+              <p class="user-info">Robson</p>
+            </div>
           </div>
         </div>
         <div class="dark-section" id="dark-section">
-          <ul class="timestamp-selection">
+          <ul class="timespan-selection">
             <li class="timespan-item" id="daily">Daily</li>
             <li class="timespan-item" id="weekly">Weekly</li>
             <li class="timespan-item" id="monthly">Monthly</li>
@@ -35,6 +43,9 @@
       </section>
       <section class="cards-section">
         <div class="card" id="work">
+          <div class="card-head">
+            <img src="./images/icon-work.svg" alt="" />
+          </div>
           <div class="inner-card">
             <div class="inner-card-head">
               <h2 class="card-title">Work</h2>
@@ -43,11 +54,16 @@
                 alt="decorative-ellipsis-icon"
               />
             </div>
-            <p class="time-score"></p>
-            <p class="last-score"></p>
+            <div class="scores-container">
+              <p class="time-score"></p>
+              <p class="last-score"></p>
+            </div>
           </div>
         </div>
         <div class="card" id="play">
+          <div class="card-head">
+            <img src="./images/icon-play.svg" alt="" />
+          </div>
           <div class="inner-card">
             <div class="inner-card-head">
               <h2 class="card-title">Play</h2>
@@ -56,11 +72,16 @@
                 alt="decorative-ellipsis-icon"
               />
             </div>
-            <p class="time-score"></p>
-            <p class="last-score"></p>
+            <div class="scores-container">
+              <p class="time-score"></p>
+              <p class="last-score"></p>
+            </div>
           </div>
         </div>
         <div class="card" id="study">
+          <div class="card-head">
+            <img src="./images/icon-study.svg" alt="" />
+          </div>
           <div class="inner-card">
             <div class="inner-card-head">
               <h2 class="card-title">Study</h2>
@@ -69,11 +90,16 @@
                 alt="decorative-ellipsis-icon"
               />
             </div>
-            <p class="time-score"></p>
-            <p class="last-score"></p>
+            <div class="scores-container">
+              <p class="time-score"></p>
+              <p class="last-score"></p>
+            </div>
           </div>
         </div>
         <div class="card" id="exercise">
+          <div class="card-head">
+            <img src="./images/icon-exercise.svg" alt="" />
+          </div>
           <div class="inner-card">
             <div class="inner-card-head">
               <h2 class="card-title">Exercise</h2>
@@ -82,11 +108,16 @@
                 alt="decorative-ellipsis-icon"
               />
             </div>
-            <p class="time-score"></p>
-            <p class="last-score"></p>
+            <div class="scores-container">
+              <p class="time-score"></p>
+              <p class="last-score"></p>
+            </div>
           </div>
         </div>
         <div class="card" id="social">
+          <div class="card-head">
+            <img src="./images/icon-social.svg" alt="" />
+          </div>
           <div class="inner-card">
             <div class="inner-card-head">
               <h2 class="card-title">Social</h2>
@@ -95,11 +126,16 @@
                 alt="decorative-ellipsis-icon"
               />
             </div>
-            <p class="time-score"></p>
-            <p class="last-score"></p>
+            <div class="scores-container">
+              <p class="time-score"></p>
+              <p class="last-score"></p>
+            </div>
           </div>
         </div>
         <div class="card" id="self-care">
+          <div class="card-head">
+            <img src="./images/icon-self-care.svg" alt="" />
+          </div>
           <div class="inner-card">
             <div class="inner-card-head">
               <h2 class="card-title">Self Care</h2>
@@ -108,8 +144,10 @@
                 alt="decorative-ellipsis-icon"
               />
             </div>
-            <p class="time-score"></p>
-            <p class="last-score"></p>
+            <div class="scores-container">
+              <p class="time-score"></p>
+              <p class="last-score"></p>
+            </div>
           </div>
         </div>
       </section>
