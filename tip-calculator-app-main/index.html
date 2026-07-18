@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <main>
+      <section class="data-section">
+        <form action="#">
+          <div class="input-general-container">
+            <label for="bill">Bill</label>
+            <div class="input-container">
+              <img src="" alt="" />
+              <input
+                type="text"
+                class="input-field"
+                name="bill"
+                id="bill"
+                placeholder="0"
+              />
+            </div>
+          </div>
+
+          <div class="buttons-container">
+            <p class="buttons-label">Select Tip %</p>
+            <button type="button" class="amount-selector">5%</button>
+            <button type="button" class="amount-selector">10%</button>
+            <button type="button" class="amount-selector">15%</button>
+            <button type="button" class="amount-selector">25%</button>
+            <button type="button" class="amount-selector">50%</button>
+            <input
+              type="number"
+              class="custom-amount-selector"
+              placeholder="Custom"
+            />
+          </div>
+
+          <div class="input-general-container">
+            <label for="people-num">Number of People</label>
+            <div class="input-container">
+              <img src="" alt="" />
+              <input
+                type="number"
+                class="input-field"
+                name="people-num"
+                id="people-num"
+                placeholder="0"
+              />
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <section class="results-section">
+        <div class="amount-container">
+          <div class="info-container">
+            <p class="title">Tip Amount</p>
+            <p class="per-person">/ person</p>
+          </div>
+          <p class="amount"></p>
+        </div>
+
+        <div class="amount-container">
+          <div class="info-container">
+            <p class="title">Total</p>
+            <p class="per-person">/ person</p>
+          </div>
+          <p class="amount"></p>
+        </div>
+
+        <button type="button">Reset</button>
+      </section>
+    </main>
+  </body>
+</html>
