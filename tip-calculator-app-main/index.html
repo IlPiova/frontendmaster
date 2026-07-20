@@ -14,31 +14,43 @@
   <body>
     <main>
       <section class="data-section">
-        <form action="#">
+        <form action="#" id="form">
           <div class="input-general-container">
             <label for="bill">Bill</label>
             <div class="input-container">
               <img src="" alt="" />
               <input
-                type="text"
+                type="number"
                 class="input-field"
                 name="bill"
                 id="bill"
-                placeholder="0"
+                value="100"
+                required
               />
             </div>
           </div>
 
-          <div class="buttons-container">
+          <div class="buttons-container" id="buttons-container">
             <p class="buttons-label">Select Tip %</p>
-            <button type="button" class="amount-selector">5%</button>
-            <button type="button" class="amount-selector">10%</button>
-            <button type="button" class="amount-selector">15%</button>
-            <button type="button" class="amount-selector">25%</button>
-            <button type="button" class="amount-selector">50%</button>
+            <button type="button" class="tip-selector" id="tip-5" value="5">
+              5%
+            </button>
+            <button type="button" class="tip-selector" id="tip-10" value="10">
+              10%
+            </button>
+            <button type="button" class="tip-selector" id="tip-15" value="15">
+              15%
+            </button>
+            <button type="button" class="tip-selector" id="tip-25" value="25">
+              25%
+            </button>
+            <button type="button" class="tip-selector" id="tip-50" value="50">
+              50%
+            </button>
             <input
               type="number"
-              class="custom-amount-selector"
+              class="custom-tip-selector"
+              id="custom-tip"
               placeholder="Custom"
             />
           </div>
@@ -52,7 +64,7 @@
                 class="input-field"
                 name="people-num"
                 id="people-num"
-                placeholder="0"
+                value="1"
               />
             </div>
           </div>
@@ -65,7 +77,7 @@
             <p class="title">Tip Amount</p>
             <p class="per-person">/ person</p>
           </div>
-          <p class="amount"></p>
+          <p class="amount" id="tip-display"></p>
         </div>
 
         <div class="amount-container">
@@ -73,11 +85,13 @@
             <p class="title">Total</p>
             <p class="per-person">/ person</p>
           </div>
-          <p class="amount"></p>
+          <p class="total" id="total-display"></p>
         </div>
 
         <button type="button">Reset</button>
       </section>
     </main>
+
+    <script src="./script.js"></script>
   </body>
 </html>
