@@ -3,6 +3,8 @@ const billInput = document.querySelector("#bill");
 const peopleNumInput = document.querySelector("#people-num");
 const button = document.querySelector("#buttons-container");
 const inputs = document.querySelectorAll("input");
+const resetButton = document.querySelector("#reset-button");
+
 const tipDisplay = document.querySelector("#tip-display");
 const totalDisplay = document.querySelector("#total-display");
 
@@ -17,33 +19,48 @@ function handleClick(e) {
     selectedTip = e.target.value;
   } else {
     handleCustomTip(e);
-    calculator();
-  }
-}
-
-function handleInput(e) {
-  if (e.target.id === "custom-tip") {
-    handleCustomTip(e);
   }
   calculator();
 }
 
-inputs.forEach((el) => el.addEventListener("input", handleInput));
+function handleInput(e) {
+  // in questo modo però se uno degli input è pieno, viene resettato90_
+  if (!e.target.value) {
+    handleReset();
+  } else {
+    if (e.target.id === "custom-tip") {
+      handleCustomTip(e);
+    }
+    calculator();
+  }
+}
 
-button.addEventListener("click", handleClick);
+function handleReset() {
+  billInput.value = undefined;
+  peopleNumInput.value = undefined;
+}
 
 function calculator() {
+  //Do all the calculations
   let individualTip, individualTotal;
 
   let tip = billInput.value * (selectedTip / 100);
-  let total = parseInt(billInput.value) + tip;
+  let total = billInput.value + tip;
   individualTip = tip / peopleNumInput.value;
   individualTotal = total / peopleNumInput.value;
+  resultCostructor(individualTip, individualTotal);
+}
 
-  console.log(tip);
-  console.log(total);
+function resultCostructor(individualTip, individualTotal) {
+  //put results on screen
   tipDisplay.textContent = individualTip;
   totalDisplay.textContent = individualTotal;
 }
+
+resetButton.addEventListener("click", handleReset());
+
+inputs.forEach((el) => el.addEventListener("input", handleInput));
+
+button.addEventListener("click", handleClick);
 
 calculator();

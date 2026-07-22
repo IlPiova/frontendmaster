@@ -9,62 +9,74 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    <main>
+    <main class="calculator-container">
       <section class="data-section">
         <form action="#" id="form">
           <div class="input-general-container">
             <label for="bill">Bill</label>
             <div class="input-container">
-              <img src="" alt="" />
+              <img src="./images/icon-dollar.svg" alt="" />
               <input
                 type="number"
                 class="input-field"
                 name="bill"
                 id="bill"
-                value="100"
+                placeholder="0"
                 required
               />
             </div>
           </div>
 
-          <div class="buttons-container" id="buttons-container">
+          <div class="buttons-general-container">
             <p class="buttons-label">Select Tip %</p>
-            <button type="button" class="tip-selector" id="tip-5" value="5">
-              5%
-            </button>
-            <button type="button" class="tip-selector" id="tip-10" value="10">
-              10%
-            </button>
-            <button type="button" class="tip-selector" id="tip-15" value="15">
-              15%
-            </button>
-            <button type="button" class="tip-selector" id="tip-25" value="25">
-              25%
-            </button>
-            <button type="button" class="tip-selector" id="tip-50" value="50">
-              50%
-            </button>
-            <input
-              type="number"
-              class="custom-tip-selector"
-              id="custom-tip"
-              placeholder="Custom"
-            />
+            <div class="buttons-container" id="buttons-container">
+              <button type="button" class="tip-selector" id="tip-5" value="5">
+                5%
+              </button>
+              <button type="button" class="tip-selector" id="tip-10" value="10">
+                10%
+              </button>
+              <button type="button" class="tip-selector" id="tip-15" value="15">
+                15%
+              </button>
+              <button type="button" class="tip-selector" id="tip-25" value="25">
+                25%
+              </button>
+              <button type="button" class="tip-selector" id="tip-50" value="50">
+                50%
+              </button>
+              <input
+                type="number"
+                class="custom-tip-selector"
+                id="custom-tip"
+                placeholder="Custom"
+                size="0"
+              />
+            </div>
           </div>
 
           <div class="input-general-container">
             <label for="people-num">Number of People</label>
             <div class="input-container">
-              <img src="" alt="" />
+              <img src="./images/icon-person.svg" alt="" />
               <input
                 type="number"
                 class="input-field"
                 name="people-num"
                 id="people-num"
-                value="1"
+                placeholder="0"
               />
             </div>
           </div>
@@ -88,7 +100,9 @@
           <p class="total" id="total-display"></p>
         </div>
 
-        <button type="button">Reset</button>
+        <button type="button" class="reset-button" id="reset-button">
+          RESET
+        </button>
       </section>
     </main>
 
