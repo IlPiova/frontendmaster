@@ -28,8 +28,7 @@ function clearError(elem) {
   elem.classList.remove("error");
   if (elem.id !== "custom-tip") {
     const parentElem = elem.closest(".input-container");
-    // const errorMex = parentElem.previousElementSibling;
-    const errorMex = null;
+    const errorMex = parentElem.previousElementSibling;
     if (errorMex && errorMex.classList.contains("errorMessage"))
       errorMex.remove();
     parentElem.classList.remove("error");
@@ -77,6 +76,8 @@ function handleReset() {
     clearError(elem);
     elem.value = "";
   });
+  tipDisplay.textContent = `$0.00`;
+  totalDisplay.textContent = `$0.00`;
 }
 
 function calculator() {
