@@ -34,37 +34,70 @@
                 name="bill"
                 id="bill"
                 placeholder="0"
+                tabindex="0"
                 required
+                min="1"
               />
             </div>
           </div>
 
-          <div class="buttons-general-container">
-            <p class="buttons-label">Select Tip %</p>
-            <div class="buttons-container" id="buttons-container">
-              <button type="button" class="tip-selector" id="tip-5" value="5">
+          <div class="tips-general-container">
+            <p class="tips-label">Select Tip %</p>
+            <ul class="tips-container" id="tips-container">
+              <li
+                class="tip-selector"
+                id="tip-5"
+                data-tip="5"
+                role="button"
+                tabindex="0"
+              >
                 5%
-              </button>
-              <button type="button" class="tip-selector" id="tip-10" value="10">
+              </li>
+              <li
+                class="tip-selector"
+                id="tip-10"
+                data-tip="10"
+                role="button"
+                tabindex="0"
+              >
                 10%
-              </button>
-              <button type="button" class="tip-selector" id="tip-15" value="15">
+              </li>
+              <li
+                class="tip-selector"
+                id="tip-15"
+                data-tip="15"
+                role="button"
+                tabindex="0"
+              >
                 15%
-              </button>
-              <button type="button" class="tip-selector" id="tip-25" value="25">
+              </li>
+              <li
+                class="tip-selector"
+                id="tip-25"
+                data-tip="25"
+                role="button"
+                tabindex="0"
+              >
                 25%
-              </button>
-              <button type="button" class="tip-selector" id="tip-50" value="50">
+              </li>
+              <li
+                class="tip-selector"
+                id="tip-50"
+                data-tip="50"
+                role="button"
+                tabindex="0"
+              >
                 50%
-              </button>
+              </li>
               <input
                 type="number"
                 class="custom-tip-selector"
                 id="custom-tip"
                 placeholder="Custom"
-                size="0"
+                tabindex="0"
+                min="1"
               />
-            </div>
+            </ul>
           </div>
 
           <div class="input-general-container">
@@ -77,6 +110,7 @@
                 name="people-num"
                 id="people-num"
                 placeholder="0"
+                min="1"
               />
             </div>
           </div>
@@ -97,10 +131,15 @@
             <p class="title">Total</p>
             <p class="per-person">/ person</p>
           </div>
-          <p class="total" id="total-display"></p>
+          <p class="amount" id="total-display"></p>
         </div>
 
-        <button type="button" class="reset-button" id="reset-button">
+        <button
+          type="button"
+          class="reset-button"
+          id="reset-button"
+          tabindex="0"
+        >
           RESET
         </button>
       </section>
