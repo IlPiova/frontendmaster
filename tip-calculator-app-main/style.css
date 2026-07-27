@@ -16,7 +16,6 @@
     font-family: "Space Mono", monospace;
     font-weight: 700;
     font-style: normal;
-    font-size: 1rem;
 }
 
 ::selection {
@@ -278,5 +277,9 @@ form {
 
     .results-section {
         inline-size: 100%;
+
+        .amount {
+            font-size: 2rem
+        }
     }
 }
