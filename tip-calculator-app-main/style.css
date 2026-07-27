@@ -235,3 +235,48 @@ form {
     top: 1rem;
     right: 0;
 }
+
+@media screen and (720px<width<1080px) {
+    body {
+        block-size: auto;
+    }
+
+    .calculator-container {
+        inline-size: 608px;
+        block-size: fit-content;
+        flex-direction: column;
+        margin-block: 10rem;
+    }
+
+    .data-section {
+        .tips-general-container {
+            .tips-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+
+}
+
+@media screen and (width<720px) {
+    .calculator-container {
+        inline-size: 100%;
+        block-size: fit-content;
+        margin-block-start: 20rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .data-section {
+        .tips-general-container {
+            .tips-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    .results-section {
+        inline-size: 100%;
+    }
+}
