@@ -106,11 +106,54 @@ form {
 
     }
 
-    .pass-lenght {
+    .psw-lenght {
         color: var(--clr-primary);
         font-size: 1.5rem;
     }
 
+
+    .range {
+        -webkit-appearance: none;
+        appearance: none;
+        background: transparent;
+    }
+
+    .range::-webkit-slider-runnable-track {
+        height: 8px;
+        outline: none
+    }
+
+    .range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        border-radius: 50%;
+        inline-size: 28px;
+        block-size: 28px;
+        background-color: var(--clr-txt);
+        margin-block-start: -10px;
+        cursor: pointer;
+    }
+
+
+
+    .range::-moz-range-track {
+        height: 8px;
+        background: var(--clr-range);
+    }
+
+    .range::-moz-range-progress {
+        height: 8px;
+        background: var(--clr-primary);
+    }
+
+    .range::-moz-range-thumb {
+        inline-size: 28px;
+        block-size: 28px;
+        border-radius: 50%;
+        background: var(--clr-txt);
+        border: none;
+        cursor: pointer;
+    }
 
 
 }

@@ -26,25 +26,32 @@
       <h1 class="title">Password Generator</h1>
 
       <section class="password-container" id="password-container">
-        <p class="password">P4$5W0rD!</p>
+        <p class="password" id="password"></p>
         <img
           src="./assets/images/icon-copy.svg"
           alt="copy-text-icon"
           width="17.5px"
+          id="copy-icon"
         />
       </section>
       <section class="properties-section">
         <form id="form" action="#">
           <div class="range-container">
             <div class="lenght-container">
-              <label for="range" min="5" max="30" class="text"
-                >Character Length</label
-              >
-              <p class="pass-lenght">10</p>
+              <label for="range" class="text">Character Length</label>
+              <p class="psw-lenght" id="psw-lenght"></p>
             </div>
-            <input class="range" type="range" name="range" id="range" />
+            <input
+              class="range"
+              type="range"
+              name="range"
+              id="range"
+              min="5"
+              max="30"
+              value="5"
+            />
           </div>
-          <div class="checkboxes-container">
+          <div class="checkboxes-container" id="checkboxes-container">
             <div class="checkbox-container">
               <input
                 type="checkbox"
@@ -102,11 +109,13 @@
             </div>
           </div>
         </div>
-        <div class="generator-container">
-          <p id="generate-button" class="generate-button">GENERATE</p>
+        <div class="generator-container" id="generate-button">
+          <p class="generate-button">GENERATE</p>
           <img src="./assets/images/icon-arrow-right.svg" alt="" />
         </div>
       </section>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
