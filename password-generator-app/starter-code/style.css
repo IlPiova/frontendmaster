@@ -5,7 +5,7 @@
     --clr-grey-900: #14171B;
     --clr-range: #18171F;
     --clr-card: #24272C;
-    --clr-grey-700: #54555B;
+    --clr-password: #54555B;
     --clr-secondary-txt: #817C92;
     --clr-txt: #E6E5EA;
 
@@ -69,7 +69,10 @@ main {
     align-items: center;
 
     .password {
+        inline-size: 100%;
         font-size: 1.5rem;
+        text-overflow: clip;
+        color: var(--clr-password);
     }
 }
 
@@ -99,14 +102,14 @@ form {
     align-items: stretch;
     gap: .5rem;
 
-    .lenght-container {
+    .length-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
     }
 
-    .psw-lenght {
+    .psw-length {
         color: var(--clr-primary);
         font-size: 1.5rem;
     }
@@ -221,6 +224,7 @@ form {
 }
 
 .generator-container {
+    inline-size: 100%;
     padding: 1rem;
     background-color: var(--clr-primary);
     color: var(--clr-bg);
@@ -235,5 +239,24 @@ form {
         border: none;
         color: var(--clr-bg);
         background-color: inherit;
+    }
+}
+
+.errorContainer {
+    padding: 1rem;
+    background-color: var(--clr-hight-strenght);
+}
+
+@media screen and (width>720px) {
+    body {
+        align-items: center;
+    }
+
+    main {
+        align-items: center;
+    }
+
+    .password-container {
+        inline-size: 100%;
     }
 }
