@@ -18,7 +18,8 @@ const strenghtResult = document.querySelector("#strenght-result");
 
 let newPsw = "";
 let checkedBoxes = [];
-let errorTimeout;
+let errorTimeout, copyTimeout;
+let copyMessage;
 
 const strs = [
   { key: 1, alph: "ABCDEFGHIJKLMNOPQRSTUVWXYZ" },
@@ -27,8 +28,27 @@ const strs = [
   { key: 4, alph: "|!£$%&/()=?^*+-/;:,.<>" },
 ];
 
+function copyMessenger() {
+  if (copyIcon.previousElementSibling.classList.length == 0)
+    copyMessage.remove();
+
+  copyMessage = document.createElement("p");
+  copyMessage.innerText = "COPIED!";
+  copyMessage.style.color = "var(--clr-primary)";
+  copyMessage.style.backgroundColor = "var(--clr-card)";
+  copyMessage.style.paddingInlineEnd = "1rem";
+  copyIcon.before(copyMessage);
+  copyTimeout = setTimeout(() => {
+    copyMessage.remove();
+  }, 2000);
+}
+
 function copyPsw(el) {
-  navigator.clipboard.writeText(el.target.previousElementSibling.innerText);
+  if (newPsw) {
+    clearTimeout(copyTimeout);
+    navigator.clipboard.writeText(el.target.previousElementSibling.innerText);
+    copyMessenger();
+  }
 }
 
 function clearError() {
