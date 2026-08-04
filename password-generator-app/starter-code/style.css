@@ -48,6 +48,12 @@ main {
     gap: 1rem;
 }
 
+button {
+    outline: none;
+    border: none;
+    background-color: inherit;
+}
+
 .title {
     font-size: 1rem;
     color: var(--clr-secondary-txt);
@@ -69,6 +75,10 @@ main {
     align-items: center;
 
     .password {
+        outline: none;
+        inline-size: 50%;
+        background-color: red;
+        border: none;
         inline-size: 100%;
         font-size: 1.5rem;
         text-overflow: clip;
@@ -187,6 +197,10 @@ form {
             background-repeat: no-repeat;
             background-position: center;
         }
+
+        .checkbox:focus, .checkbox:active, .checkbox:hover {
+            border: var(--clr-primary) solid 2px;
+        }
     }
 }
 
@@ -235,16 +249,21 @@ form {
     gap: 1rem;
 
     .generate-button {
-        outline: none;
-        border: none;
         color: var(--clr-bg);
         background-color: inherit;
+        font-size: 1rem;
     }
 }
 
-.errorContainer {
+.error-container {
     padding: 1rem;
     background-color: var(--clr-hight-strenght);
+}
+
+.copy-message {
+    color: var(--clr-primary);
+    background-color: inherit;
+
 }
 
 @media screen and (width>720px) {

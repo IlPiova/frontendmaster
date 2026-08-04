@@ -26,13 +26,22 @@
       <h1 class="title">Password Generator</h1>
 
       <section class="password-container" id="password-container">
-        <p class="password" id="password"></p>
-        <img
-          src="./assets/images/icon-copy.svg"
-          alt="copy-text-icon"
-          width="17.5px"
-          id="copy-icon"
+        <input
+          type="text"
+          readonly
+          class="password"
+          id="password"
+          width="0px"
         />
+        <p class="copy-message" id="copy-message"></p>
+        <button type="button">
+          <img
+            src="./assets/images/icon-copy.svg"
+            alt="copy-text-icon"
+            width="17.5px"
+            id="copy-icon"
+          />
+        </button>
       </section>
       <section class="properties-section">
         <form id="form" action="#">
@@ -110,7 +119,7 @@
           </div>
         </div>
         <div class="generator-container" id="generate-button">
-          <p class="generate-button">GENERATE</p>
+          <button type="button" class="generate-button">GENERATE</button>
           <img src="./assets/images/icon-arrow-right.svg" alt="" />
         </div>
       </section>

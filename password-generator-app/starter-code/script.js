@@ -4,7 +4,7 @@ const pswProperties = document.querySelector("#checkboxes-container");
 const pswDisplay = document.querySelector("#password");
 const copyIcon = document.querySelector("#copy-icon");
 const generateButton = document.querySelector("#generate-button");
-const password = document.querySelector("#password");
+const copyMessage = document.querySelector("#copy-message");
 
 //Checkboxes selection
 const uppercase = document.querySelector("#uppercase");
@@ -19,7 +19,6 @@ const strenghtResult = document.querySelector("#strenght-result");
 let newPsw = "";
 let checkedBoxes = [];
 let errorTimeout, copyTimeout;
-let copyMessage;
 
 const strs = [
   { key: 1, alph: "ABCDEFGHIJKLMNOPQRSTUVWXYZ" },
@@ -29,15 +28,9 @@ const strs = [
 ];
 
 function copyMessenger() {
-  if (copyIcon.previousElementSibling.classList.length == 0)
-    copyMessage.remove();
+  if (copyMessage.innerText) copyMessage.innerText = "";
 
-  copyMessage = document.createElement("p");
   copyMessage.innerText = "COPIED!";
-  copyMessage.style.color = "var(--clr-primary)";
-  copyMessage.style.backgroundColor = "var(--clr-card)";
-  copyMessage.style.paddingInlineEnd = "1rem";
-  copyIcon.before(copyMessage);
   copyTimeout = setTimeout(() => {
     copyMessage.remove();
   }, 2000);
@@ -46,13 +39,13 @@ function copyMessenger() {
 function copyPsw(el) {
   if (newPsw) {
     clearTimeout(copyTimeout);
-    navigator.clipboard.writeText(el.target.previousElementSibling.innerText);
+    navigator.clipboard.writeText(pswDisplay.value);
     copyMessenger();
   }
 }
 
 function clearError() {
-  generateButton.classList.remove("errorContainer");
+  generateButton.classList.remove("error-container");
   generateButton.firstElementChild.style.color = "var(--clr-bg)";
   generateButton.lastElementChild.style.display = "block";
   generateButton.firstElementChild.innerText = "GENERATE";
@@ -60,7 +53,7 @@ function clearError() {
 }
 
 function handleError() {
-  generateButton.classList.add("errorContainer");
+  generateButton.classList.add("error-container");
   generateButton.firstElementChild.style.color = "var(--clr-txt)";
   generateButton.lastElementChild.style.display = "none";
   generateButton.firstElementChild.innerText = "Select at least one property";
@@ -148,7 +141,7 @@ function pswConstructor() {
 }
 
 function displayNewPsw(psw) {
-  pswDisplay.innerText = psw;
+  pswDisplay.value = psw;
 }
 
 function strenghtDisplay() {
