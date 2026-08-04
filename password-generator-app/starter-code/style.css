@@ -76,8 +76,7 @@ button {
 
     .password {
         outline: none;
-        inline-size: 50%;
-        background-color: red;
+        background-color: inherit;
         border: none;
         inline-size: 100%;
         font-size: 1.5rem;
@@ -88,6 +87,7 @@ button {
 
 .properties-section {
     background-color: var(--clr-card);
+    inline-size: 100%;
     padding: 1rem;
     display: flex;
     flex-direction: column;

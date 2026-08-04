@@ -32,7 +32,7 @@ function copyMessenger() {
 
   copyMessage.innerText = "COPIED!";
   copyTimeout = setTimeout(() => {
-    copyMessage.remove();
+    copyMessage.innerText = "";
   }, 2000);
 }
 
