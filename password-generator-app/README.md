@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - [Github Repository](https://github.com/IlPiova/frontendmaster/tree/main/password-generator-app)
-- [Live Site](fementor-passwordgeneratorproject.netlify.app)
+- [Live Site](https://fementor-passwordgeneratorproject.netlify.app)
 
 ## My process
 

@@ -11,13 +11,8 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
   - [AI Collaboration](#ai-collaboration)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -36,7 +31,7 @@ Users should be able to:
 ### Links
 
 - [Github Repository](https://github.com/IlPiova/frontendmaster/tree/main/tip-calculator-app-main)
-- [Live Site](https://your-live-site-url.com)
+- [Live Site](https://fementor-tipcalculatorproject.netlify.app)
 
 ## My process
 
@@ -49,6 +44,8 @@ Users should be able to:
 - Mobile-first workflow
 
 ### What I learned
+
+The most important lesson I learnt from this project was how to handle forms without a submit button (they update the data directly) and how to manage errors. I also feel more confident using grids and styling input fields.
 
 ### AI Collaboration
 

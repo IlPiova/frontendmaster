@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - [Github Repository](https://github.com/IlPiova/frontendmaster/tree/main/tip-calculator-app-main)
-- [Live Site](fementor-time-tracking-project.netlify.app)
+- [Live Site](https://fementor-time-tracking-project.netlify.app)
 
 ## My process
 
