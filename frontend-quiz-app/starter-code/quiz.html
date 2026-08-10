@@ -6,51 +6,58 @@
     <title>Document</title>
   </head>
   <body>
-    <header><div>
-        <img src="" alt="">
-        <p class="answare" id="active-category"></p>
-    </div>
-<div class="theme-chooser" id="them-chooser">
+    <header>
+      <div>
+        <img src="" alt="" />
+        <p class="answer" id="active-category"></p>
+      </div>
+      <div class="theme-chooser" id="them-chooser">
         <img src="" alt="" /><input type="checkbox" name="" id="" /><img
           src=""
           alt=""
         />
-      </div></header>
+      </div>
+    </header>
     <!-- main è una griglia di due colonne e 6 righe -->
     <main class="main">
       <section class="question-section">
         <p class="sub-text">
           Question <span class="sub-text" id="question-number"></span>of 10
         </p>
+        <p class="question-body" id="question-body"></p>
+
         <div class="progress-bar" role="progressbar"></div>
-        <p class="question-body"></p>
       </section>
-      <section class="answare-section">
-        <div class="answare" role="checkbox" tabindex="0" id="answare-A">
-          <div class="answare-index-container">
-            <p class="answare-index">A</p>
+      <section class="answer-section">
+        <div class="answer-selector" role="checkbox" tabindex="0" id="answer-A">
+          <div class="answer-index-container">
+            <p class="answer-index">A</p>
           </div>
-          <p class="answare"></p>
+          <p class="answer"></p>
         </div>
-        <div class="answare" role="checkbox" tabindex="0" id="answare-B">
-          <div class="answare-index-container">
-            <p class="answare-index">B</p>
+        <div class="answer-selector" role="checkbox" tabindex="0" id="answer-B">
+          <div class="answer-index-container">
+            <p class="answer-index">B</p>
           </div>
-          <p class="answare"></p>
+          <p class="answer"></p>
         </div>
-        <div class="answare" role="checkbox" tabindex="0" id="answare-C">
-          <div class="answare-index-container">
-            <p class="answare-index">C</p>
+        <div class="answer-selector" role="checkbox" tabindex="0" id="answer-C">
+          <div class="answer-index-container">
+            <p class="answer-index">C</p>
           </div>
-          <p class="answare"></p>
+          <p class="answer"></p>
         </div>
-        <div class="answare" role="checkbox" tabindex="0" id="answare-D">
-          <div class="answare-index-container">
-            <p class="answare-index">D</p>
+        <div class="answer-selector" role="checkbox" tabindex="0" id="answer-D">
+          <div class="answer-index-container">
+            <p class="answer-index">D</p>
           </div>
-          <p class="answare"></p>
+          <p class="answer"></p>
         </div>
-        <button type="button" class="submit-button">Submit answer</button>
+        <button type="button" class="submit-button" id="submit-button">
+          Submit answer
+        </button>
       </section>
     </main>
+    <script type="module" src="./modules/quizData.js"></script>
+  </body>
 </html>
