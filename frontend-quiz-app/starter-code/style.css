@@ -1,0 +1,132 @@
+:root {
+    --clr-bg: #f4f6fa;
+    --clr-accent: #A729F5;
+    --clr-option: #ffffff;
+    --clr-right-answer: #2fd887;
+    --wrong-answer: #ee5454;
+    /*text colors*/
+    --clr-txt: #313E51;
+    --clr-sub-txt: #626c7f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font: 400 16px "Rubik";
+    color: var(--clr-txt);
+}
+
+body {
+    background-color: var(--clr-bg);
+    inline-size: 100%;
+    block-size: 100vb;
+    padding-inline: 1.5rem;
+    padding-block-start: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("./assets/images/pattern-background-mobile-light.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+header {
+    inline-size: 100%;
+    align-self: flex-end;
+    /* background-color: blue; */
+
+    .theme-chooser {
+        inline-size: fit-content;
+        appearance: none;
+        margin-inline-start: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+main {
+
+    inline-size: 100%;
+    block-size: fit-content;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+
+    .title-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        h1 {
+            font-size: 40px;
+
+            .bold-title {
+                font-size: inherit;
+                font-weight: 600;
+            }
+        }
+
+        .sub-text {
+            color: var(--clr-sub-txt);
+            font-style: italic;
+        }
+    }
+
+    .category-section {
+        inline-size: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .category-selector {
+        inline-size: 100%;
+        background-color: var(--clr-option);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 12px;
+
+        img {
+            inline-size: 28.7px;
+            padding: .5rem;
+            border-radius: 6px;
+        }
+
+        #html-icon {
+            background-color: #fff5ed;
+
+        }
+
+        #css-icon {
+            background-color: #e0fdef;
+
+        }
+
+        #js-icon {
+            background-color: #ebf0ff;
+
+        }
+
+        #accessibility-icon {
+            background-color: #f6e7ff;
+
+        }
+
+        .answer {
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-decoration: none;
+        }
+    }
+}
