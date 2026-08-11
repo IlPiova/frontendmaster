@@ -6,8 +6,11 @@ const answerSelectors = document.querySelectorAll(".answer-selector");
 const submitButton = document.querySelector("#submit-button");
 let questionCounter = 0;
 let questions = [];
-let rightAnsware = 0;
+let rightAnswers = 0;
 let category = sessionStorage.getItem("cat");
+
+// In realtà quando la risposta è errata segnala la risposta data in rosso e in verde la corretta.
+//  Il bottone è disattivato se non viene selezionata una risposta e restituicse un errore se premuto senza selezione
 
 function questionsFinder() {
   for (let i = 0; i < fetchedData.length; i++) {
@@ -39,8 +42,12 @@ function quizMaker() {
 }
 
 function handleSubmit(e) {
-  //   document.preventDefault(e);
-  quizMaker();
+  if (questionCounter <= questions.length) {
+    quizMaker();
+  } else {
+    sessionStorage.setItem("score", rightAnswers);
+    window.location.href = "../results.html";
+  }
 }
 
 function isCorrect(e) {
@@ -48,7 +55,7 @@ function isCorrect(e) {
     e.currentTarget.lastElementChild.innerText ==
     questions[questionNumber].questions.answer
   ) {
-    rightAnsware++;
+    rightAnswers++;
     e.currentTarget.classlist.add = "right-answer-style";
   } else {
     e.currentTarget.classlist.add = "wrong-answer-style";
@@ -62,3 +69,5 @@ answerSelectors.forEach((selector) =>
 submitButton.addEventListener("click", handleSubmit);
 questionsFinder();
 quizMaker();
+
+export { rightAnswers };
