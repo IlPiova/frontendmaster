@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../starter-code/style.css" />
+    <link rel="stylesheet" href="./styles/results.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,10 +15,10 @@
     <title>Frontend quiz app</title>
   </head>
   <body>
-    <header>
-      <div>
-        <img src="" alt="" id="category-icon" />
-        <p class="answare" id="active-category"></p>
+    <header class="category-header">
+      <div class="category-card">
+        <img src="" alt="" id="category-icon" class="option-image" />
+        <p class="answer" id="active-category"></p>
       </div>
       <div class="theme-chooser" id="them-chooser">
         <img src="./assets/images/icon-sun-dark.svg" alt="" /><input
@@ -33,14 +34,16 @@
       </section>
       <section class="result-section">
         <div class="result-container">
-          <div>
-            <img src="" alt="" />
-            <p class="answare" id="category"></p>
+          <div class="category-card">
+            <img src="" alt="" id="category-icon" class="option-image" />
+            <p class="answer" id="active-category"></p>
           </div>
           <p class="result" id="result"></p>
           <p class="sub-text">out of 10</p>
-          <button type="button" id="play-again">Play Again</button>
         </div>
+        <button type="button" id="play-again" class="submit-button">
+          Play Again
+        </button>
       </section>
     </main>
   </body>

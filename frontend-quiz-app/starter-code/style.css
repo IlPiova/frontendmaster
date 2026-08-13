@@ -67,7 +67,7 @@ main {
     }
 
     h1 {
-        font-size: 40px;
+        font-size: 2.5rem;
 
         .bold-title {
             font-size: inherit;
@@ -88,47 +88,79 @@ main {
         align-items: flex-start;
         gap: 1rem;
     }
+}
 
-    .option-selector {
-        inline-size: 100%;
-        background-color: var(--clr-option);
+.option-selector {
+    inline-size: 100%;
+    background-color: var(--clr-option);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.option-image {
+    inline-size: 28.7px;
+    padding: .5rem;
+    border-radius: 6px;
+}
+
+#html-icon {
+    background-color: #fff5ed;
+
+}
+
+#css-icon {
+    background-color: #e0fdef;
+
+}
+
+#js-icon {
+    background-color: #ebf0ff;
+
+}
+
+#accessibility-icon {
+    background-color: #f6e7ff;
+
+}
+
+
+
+
+.answer {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.submit-button {
+    background-color: var(--clr-accent);
+    color: var(--clr-option);
+    inline-size: 100%;
+    border-radius: .8rem;
+    border: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.category-header {
+    inline-size: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .category-card {
+        inline-size: fit-content;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 1rem;
         padding: 1rem;
         border-radius: 12px;
-    }
 
-    .option-image {
-        inline-size: 28.7px;
-        padding: .5rem;
-        border-radius: 6px;
-    }
-
-    #html-icon {
-        background-color: #fff5ed;
-
-    }
-
-    #css-icon {
-        background-color: #e0fdef;
-
-    }
-
-    #js-icon {
-        background-color: #ebf0ff;
-
-    }
-
-    #accessibility-icon {
-        background-color: #f6e7ff;
-
-    }
-
-    .answer {
-        font-size: 1.1rem;
-        font-weight: 500;
-        text-decoration: none;
     }
 }

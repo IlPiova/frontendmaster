@@ -1,0 +1,38 @@
+.result-section {
+    inline-size: 100%;
+    Display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.result-container {
+    inline-size: 100%;
+    background-color: var(--clr-option);
+    border-radius: .8rem;
+    padding: 2rem;
+    margin-block-start: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .category-card {
+        justify-self: center;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .sub-text {
+        font-style: normal;
+        font-size: 1.2rem;
+    }
+}
+
+.result {
+    font-size: 5.5rem;
+    font-weight: 500;
+}
