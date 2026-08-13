@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/quiz.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,28 +36,30 @@
         </p>
         <p class="question-body" id="question-body"></p>
 
-        <div class="progress-bar" role="progressbar"></div>
+        <div class="progressbar" role="progressbar">
+          <div class="active-progress-bar" id="active-progress-bar"></div>
+        </div>
       </section>
-      <section class="answer-section">
-        <div class="answer-selector" role="checkbox" tabindex="0" id="answer-A">
+      <section class="options-section">
+        <div class="option-selector" role="checkbox" tabindex="0" id="answer-A">
           <div class="answer-index-container">
             <p class="answer-index">A</p>
           </div>
           <p class="answer"></p>
         </div>
-        <div class="answer-selector" role="checkbox" tabindex="0" id="answer-B">
+        <div class="option-selector" role="checkbox" tabindex="0" id="answer-B">
           <div class="answer-index-container">
             <p class="answer-index">B</p>
           </div>
           <p class="answer"></p>
         </div>
-        <div class="answer-selector" role="checkbox" tabindex="0" id="answer-C">
+        <div class="option-selector" role="checkbox" tabindex="0" id="answer-C">
           <div class="answer-index-container">
             <p class="answer-index">C</p>
           </div>
           <p class="answer"></p>
         </div>
-        <div class="answer-selector" role="checkbox" tabindex="0" id="answer-D">
+        <div class="option-selector" role="checkbox" tabindex="0" id="answer-D">
           <div class="answer-index-container">
             <p class="answer-index">D</p>
           </div>

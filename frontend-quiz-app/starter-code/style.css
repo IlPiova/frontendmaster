@@ -4,6 +4,8 @@
     --clr-option: #ffffff;
     --clr-right-answer: #2fd887;
     --wrong-answer: #ee5454;
+    --clr-index-bg: #f4f6fa;
+    ;
     /*text colors*/
     --clr-txt: #313E51;
     --clr-sub-txt: #626c7f;
@@ -34,7 +36,6 @@ body {
 header {
     inline-size: 100%;
     align-self: flex-end;
-    /* background-color: blue; */
 
     .theme-chooser {
         inline-size: fit-content;
@@ -51,7 +52,6 @@ main {
 
     inline-size: 100%;
     block-size: fit-content;
-    /* background-color: red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,22 +63,24 @@ main {
         justify-content: center;
         align-items: flex-start;
 
-        h1 {
-            font-size: 40px;
 
-            .bold-title {
-                font-size: inherit;
-                font-weight: 600;
-            }
-        }
+    }
 
-        .sub-text {
-            color: var(--clr-sub-txt);
-            font-style: italic;
+    h1 {
+        font-size: 40px;
+
+        .bold-title {
+            font-size: inherit;
+            font-weight: 600;
         }
     }
 
-    .category-section {
+    .sub-text {
+        color: var(--clr-sub-txt);
+        font-style: italic;
+    }
+
+    .options-section {
         inline-size: 100%;
         display: flex;
         flex-direction: column;
@@ -87,7 +89,7 @@ main {
         gap: 1rem;
     }
 
-    .category-selector {
+    .option-selector {
         inline-size: 100%;
         background-color: var(--clr-option);
         display: flex;
@@ -96,37 +98,37 @@ main {
         gap: 1rem;
         padding: 1rem;
         border-radius: 12px;
+    }
 
-        img {
-            inline-size: 28.7px;
-            padding: .5rem;
-            border-radius: 6px;
-        }
+    .option-image {
+        inline-size: 28.7px;
+        padding: .5rem;
+        border-radius: 6px;
+    }
 
-        #html-icon {
-            background-color: #fff5ed;
+    #html-icon {
+        background-color: #fff5ed;
 
-        }
+    }
 
-        #css-icon {
-            background-color: #e0fdef;
+    #css-icon {
+        background-color: #e0fdef;
 
-        }
+    }
 
-        #js-icon {
-            background-color: #ebf0ff;
+    #js-icon {
+        background-color: #ebf0ff;
 
-        }
+    }
 
-        #accessibility-icon {
-            background-color: #f6e7ff;
+    #accessibility-icon {
+        background-color: #f6e7ff;
 
-        }
+    }
 
-        .answer {
-            font-size: 1.1rem;
-            font-weight: 500;
-            text-decoration: none;
-        }
+    .answer {
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-decoration: none;
     }
 }

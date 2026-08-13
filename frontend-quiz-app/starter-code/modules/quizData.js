@@ -2,7 +2,7 @@ import { fetchedData } from "./fetchData.js";
 
 const question = document.querySelector("#question-body");
 const questionNumber = document.querySelector("#question-number");
-const answerSelectors = document.querySelectorAll(".answer-selector");
+const answerSelectors = document.querySelectorAll(".option-selector");
 const submitButton = document.querySelector("#submit-button");
 let questionCounter = 0;
 let questions = [];
@@ -12,19 +12,22 @@ let category = sessionStorage.getItem("cat");
 // In realtà quando la risposta è errata segnala la risposta data in rosso e in verde la corretta.
 //  Il bottone è disattivato se non viene selezionata una risposta e restituicse un errore se premuto senza selezione
 
+function optionsMaker() {
+  let i = 0;
+  answerSelectors.forEach((selector) => {
+    console.log(selector.lastElementChild);
+    selector.lastElementChild.innerText = questions[questionCounter].options[i];
+    i++;
+  });
+  questionCounter++;
+}
+
 function questionsFinder() {
   for (let i = 0; i < fetchedData.length; i++) {
     if (category !== fetchedData[i].title) continue;
     questions = fetchedData[i].questions;
   }
-}
-
-function optionsMaker() {
-  answerSelectors.forEach((selector) => {
-    let i = 0;
-    selector.lastElementChild.innerText = questions[questionCounter].options[i];
-  });
-  questionCounter++;
+  optionsMaker();
 }
 
 function currentQuestionMaker() {
@@ -32,11 +35,11 @@ function currentQuestionMaker() {
 }
 
 function updateQuestionNumber() {
-  questionNumber.innerText = questionCounter;
+  questionNumber.innerText = `${questionCounter} `;
 }
 
 function quizMaker() {
-  optionsMaker();
+  questionsFinder();
   currentQuestionMaker();
   updateQuestionNumber();
 }
