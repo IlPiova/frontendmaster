@@ -2,13 +2,15 @@ let category = sessionStorage.getItem("cat");
 const categoryIcon = document.querySelector("#category-icon");
 const categoryName = document.querySelector("#active-category");
 const themeChooser = document.querySelector("#theme-chooser");
+const sunIcon = document.querySelector("#sun-icon");
+const moonIcon = document.querySelector("#moon-icon");
+
 function headerCategoryConstructor() {
-  categoryName.innerText = "";
-  if (categoryIcon.classList - length > 1)
+  if (categoryName) categoryName.innerText = "";
+  if (categoryIcon && categoryIcon.classList - length > 1)
     categoryIcon.classList.remove(categoryIcon.classList[1]);
-  if (category) {
+  if (category && categoryName) {
     categoryName.innerText = category;
-    console.log(category);
     switch (category) {
       case "HTML":
         categoryIcon.setAttribute("src", "./assets/images/icon-html.svg");
@@ -40,10 +42,21 @@ function headerCategoryConstructor() {
 }
 
 function changeTheme() {
-  console.log("CIAO");
-  themeChooser.checked
-    ? document.documentElement.style.setProperty("color-scheme", "dark")
-    : document.documentElement.style.setProperty("color-scheme", "light");
+  if (themeChooser.checked) {
+    document.documentElement.style.setProperty("color-scheme", "dark");
+    sunIcon.setAttribute(
+      "src",
+      "/starter-code/assets/images/icon-moon-light.svg",
+    );
+    moonIcon.setAttribute(
+      "src",
+      "/starter-code/assets/images/icon-moon-light.svg",
+    );
+  } else {
+    document.documentElement.style.setProperty("color-scheme", "light");
+    sunIcon.setAttribute("src", "../assets/images/icon-sun-dark.svg");
+    moonIcon.setAttribute("src", "../assets/images/icon-moon-dark.svg");
+  }
 }
 
 themeChooser.addEventListener("click", changeTheme);

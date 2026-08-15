@@ -14,12 +14,11 @@ let category = sessionStorage.getItem("cat");
 
 function optionsMaker() {
   let i = 0;
+  console.log(questionCounter);
   answerSelectors.forEach((selector) => {
-    console.log(selector.lastElementChild);
     selector.lastElementChild.innerText = questions[questionCounter].options[i];
     i++;
   });
-  questionCounter++;
 }
 
 function questionsFinder() {
@@ -70,7 +69,6 @@ answerSelectors.forEach((selector) =>
 );
 
 submitButton.addEventListener("click", handleSubmit);
-questionsFinder();
 quizMaker();
 
 export { rightAnswers };
