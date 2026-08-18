@@ -1,9 +1,9 @@
 :root {
     --clr-bg: light-dark(#f4f6fa, #313e51);
-    --clr-accent: (#A729F5);
+    --clr-accent: #A729F5;
     --clr-option: light-dark(#ffffff, #626c7f);
     --clr-right-answer: #2fd887;
-    --wrong-answer: #ee5454;
+    --clr-wrong-answer: #ee5454;
     --clr-index-bg: #f4f6fa;
 
     /*text colors*/
@@ -101,6 +101,20 @@ main {
     border-radius: 12px;
 }
 
+.option-selector:active, .option-selector:hover, .option-selector:focus {
+    border: var(--clr-accent) solid 2px;
+
+    .answer-index-container {
+        background-color: var(--clr-accent);
+
+        .answer-index {
+            color: var(--clr-index-bg);
+
+        }
+    }
+}
+
+
 .option-image {
     inline-size: 28.7px;
     padding: .5rem;
@@ -158,5 +172,31 @@ main {
         padding: 1rem;
         border-radius: 12px;
 
+    }
+}
+
+.right-answer-style {
+    border: var(--clr-right-answer) solid 5px;
+
+    .answer-index-container {
+        background-color: var(--clr-right-answer);
+
+        .answer-index {
+            color: var(--clr-index-bg);
+
+        }
+    }
+}
+
+.wrong-answer-style {
+    border: var(--clr-wrong-answer) solid 5px;
+
+    .answer-index-container {
+        background-color: var(--clr-wrong-answer);
+
+        .answer-index {
+            color: var(--clr-index-bg);
+
+        }
     }
 }

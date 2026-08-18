@@ -1,16 +1,14 @@
 import { fetchedData } from "./fetchData.js";
-
+import { handleSubmit } from "./handleSubmit.js";
 const question = document.querySelector("#question-body");
 const questionNumber = document.querySelector("#question-number");
-const answerSelectors = document.querySelectorAll(".option-selector");
+const answerSelectors = Array.from(
+  document.querySelectorAll(".option-selector"),
+);
 const submitButton = document.querySelector("#submit-button");
-let questionCounter = 0;
+let questionCounter = sessionStorage.getItem("question");
 let questions = [];
-let rightAnswers = 0;
 let category = sessionStorage.getItem("cat");
-
-// In realtà quando la risposta è errata segnala la risposta data in rosso e in verde la corretta.
-//  Il bottone è disattivato se non viene selezionata una risposta e restituicse un errore se premuto senza selezione
 
 function optionsMaker() {
   let i = 0;
@@ -38,37 +36,18 @@ function updateQuestionNumber() {
 }
 
 function quizMaker() {
+  questionCounter = Number(sessionStorage.getItem("question"));
   questionsFinder();
   currentQuestionMaker();
   updateQuestionNumber();
 }
 
-function handleSubmit(e) {
-  if (questionCounter <= questions.length) {
-    quizMaker();
-  } else {
-    sessionStorage.setItem("score", rightAnswers);
-    window.location.href = "../results.html";
-  }
-}
-
-function isCorrect(e) {
-  if (
-    e.currentTarget.lastElementChild.innerText ==
-    questions[questionNumber].questions.answer
-  ) {
-    rightAnswers++;
-    e.currentTarget.classlist.add = "right-answer-style";
-  } else {
-    e.currentTarget.classlist.add = "wrong-answer-style";
-  }
-}
-
 answerSelectors.forEach((selector) =>
-  selector.addEventListener("click", (e) => isCorrect(e)),
+  selector.addEventListener("click", (e) => {
+    e.currentTarget.setAttribute("aria-checked", "true");
+  }),
 );
 
 submitButton.addEventListener("click", handleSubmit);
 quizMaker();
-
-export { rightAnswers };
+export { answerSelectors, questions, quizMaker };

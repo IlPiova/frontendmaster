@@ -20,6 +20,13 @@
         <img src="" alt="" id="category-icon" class="option-image" />
         <p class="answer" id="active-category"></p>
       </div>
+      <div class="theme-chooser" id="them-chooser">
+        <img src="" alt="" id="sun-icon" /><input
+          type="checkbox"
+          name="theme-chooser"
+          id="theme-chooser"
+        /><img src="" alt="" id="moon-icon" />
+      </div>
     </header>
     <!-- main è una griglia di due colonne e 6 righe -->
     <main class="main">
@@ -34,29 +41,57 @@
         </div>
       </section>
       <section class="options-section">
-        <div class="option-selector" role="checkbox" tabindex="0" id="answer-A">
+        <div
+          class="option-selector"
+          role="checkbox"
+          aria-checked="false"
+          aria-labelledby="answer-a"
+          tabindex="0"
+          id="answer-A"
+        >
           <div class="answer-index-container">
             <p class="answer-index">A</p>
           </div>
-          <p class="answer"></p>
+          <p class="answer" id="answer-a"></p>
         </div>
-        <div class="option-selector" role="checkbox" tabindex="0" id="answer-B">
+        <div
+          class="option-selector"
+          role="checkbox"
+          aria-checked="false"
+          aria-labelledby="answer-b"
+          tabindex="0"
+          id="answer-B"
+        >
           <div class="answer-index-container">
             <p class="answer-index">B</p>
           </div>
-          <p class="answer"></p>
+          <p class="answer" id="answer-b"></p>
         </div>
-        <div class="option-selector" role="checkbox" tabindex="0" id="answer-C">
+        <div
+          class="option-selector"
+          role="checkbox"
+          aria-checked="false"
+          aria-labelledby="answer-c"
+          tabindex="0"
+          id="answer-C"
+        >
           <div class="answer-index-container">
             <p class="answer-index">C</p>
           </div>
-          <p class="answer"></p>
+          <p class="answer" id="answer-c"></p>
         </div>
-        <div class="option-selector" role="checkbox" tabindex="0" id="answer-D">
+        <div
+          class="option-selector"
+          role="checkbox"
+          aria-checked="false"
+          aria-labelledby="answer-d"
+          tabindex="0"
+          id="answer-D"
+        >
           <div class="answer-index-container">
             <p class="answer-index">D</p>
           </div>
-          <p class="answer"></p>
+          <p class="answer" id="answer-d"></p>
         </div>
         <button type="button" class="submit-button" id="submit-button">
           Submit answer
@@ -65,5 +100,6 @@
     </main>
     <script type="module" src="./modules/quizData.js"></script>
     <script type="module" src="./modules/headerConstructor.js"></script>
+    <script type="module" src="./modules/handleSubmit.js"></script>
   </body>
 </html>
