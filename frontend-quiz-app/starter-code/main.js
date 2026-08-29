@@ -1,5 +1,8 @@
 const categorySelectors = document.querySelectorAll(".option-selector");
 let category = "";
+sessionStorage.setItem("question", 0);
+sessionStorage.setItem("score", 0);
+
 function choosenCategory(e) {
   sessionStorage.removeItem("cat");
   category = e.currentTarget.lastElementChild.id;

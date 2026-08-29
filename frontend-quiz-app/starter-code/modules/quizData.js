@@ -1,4 +1,3 @@
-import { fetchedData } from "./fetchData.js";
 import { handleSubmit } from "./handleSubmit.js";
 const question = document.querySelector("#question-body");
 const questionNumber = document.querySelector("#question-number");
@@ -7,6 +6,7 @@ const answerSelectors = Array.from(
 );
 const submitButton = document.querySelector("#submit-button");
 let questionCounter = sessionStorage.getItem("question");
+let fetchedData = JSON.parse(sessionStorage.getItem("data"));
 let questions = [];
 let category = sessionStorage.getItem("cat");
 
@@ -44,10 +44,11 @@ function quizMaker() {
 
 answerSelectors.forEach((selector) =>
   selector.addEventListener("click", (e) => {
+    submitButton.setAttribute("data-status", "active");
     e.currentTarget.setAttribute("aria-checked", "true");
   }),
 );
 
 submitButton.addEventListener("click", handleSubmit);
 quizMaker();
-export { answerSelectors, questions, quizMaker };
+export { answerSelectors, questions, quizMaker, submitButton };

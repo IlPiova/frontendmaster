@@ -9,4 +9,4 @@ const data = await fetch("/frontend-quiz-app/starter-code/data.json").then(
 );
 let fetchedData = data.quizzes;
 
-export { fetchedData };
+sessionStorage.setItem("data", JSON.stringify(fetchedData));
