@@ -53,9 +53,11 @@ function changeTheme() {
     moonIcon.setAttribute("src", "../assets/images/icon-moon-dark.svg");
   }
 }
-categoryHeader.addEventListener(
-  "click",
-  () => (window.location.href = "../index.html"),
-);
+if (categoryHeader) {
+  categoryHeader.addEventListener(
+    "click",
+    () => (window.location.href = "../index.html"),
+  );
+}
 themeChooser.addEventListener("click", changeTheme);
 headerCategoryConstructor();
