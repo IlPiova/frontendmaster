@@ -45,14 +45,8 @@ function headerCategoryConstructor() {
 function changeTheme() {
   if (themeChooser.checked) {
     document.documentElement.style.setProperty("color-scheme", "dark");
-    sunIcon.setAttribute(
-      "src",
-      "/starter-code/assets/images/icon-sun-light.svg",
-    );
-    moonIcon.setAttribute(
-      "src",
-      "/starter-code/assets/images/icon-moon-light.svg",
-    );
+    sunIcon.setAttribute("src", "../assets/images/icon-sun-light.svg");
+    moonIcon.setAttribute("src", "../assets/images/icon-sun-light.svg");
   } else {
     document.documentElement.style.setProperty("color-scheme", "light");
     sunIcon.setAttribute("src", "../assets/images/icon-sun-dark.svg");
