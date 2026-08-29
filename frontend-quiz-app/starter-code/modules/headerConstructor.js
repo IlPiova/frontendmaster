@@ -4,6 +4,7 @@ const categoryName = document.querySelector("#active-category");
 const themeChooser = document.querySelector("#theme-chooser");
 const sunIcon = document.querySelector("#sun-icon");
 const moonIcon = document.querySelector("#moon-icon");
+const categoryHeader = document.querySelector("#category-header");
 
 function headerCategoryConstructor() {
   if (categoryName) categoryName.innerText = "";
@@ -58,6 +59,9 @@ function changeTheme() {
     moonIcon.setAttribute("src", "../assets/images/icon-moon-dark.svg");
   }
 }
-
+categoryHeader.addEventListener(
+  "click",
+  () => (window.location.href = "../index.html"),
+);
 themeChooser.addEventListener("click", changeTheme);
 headerCategoryConstructor();

@@ -1,4 +1,6 @@
-const data = await fetch("/frontend-quiz-app/starter-code/data.json").then(
+let data = "";
+
+data = await fetch("/frontend-quiz-app/starter-code/data.json").then(
   (response) => {
     if (response.ok) {
       return response.json();

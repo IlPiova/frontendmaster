@@ -7,10 +7,8 @@ import {
 let questionCounter = Number(sessionStorage.getItem("question"));
 let rightAnswers = Number(sessionStorage.getItem("score"));
 
-//Aggiungere rightAnswers prendendolo da sessionStorage (aggiornare il valore come fatto con questionCounter)
-
 export function handleSubmit() {
-  if (submitButton.dataSet === "disabled") return;
+  if (submitButton.getAttribute("data-status") === "disabled") return;
   submitButton.setAttribute("data-status", "disabled");
   let selectedAnswer = answerSelectors.filter((selector) => {
     if (selector.ariaChecked === "true") return selector;
@@ -47,7 +45,7 @@ function goNext(selectedAnswer) {
   });
 
   questionCounter++;
-  if (questionCounter <= questions.length) {
+  if (questionCounter < questions.length) {
     sessionStorage.setItem("question", questionCounter);
     quizMaker();
   } else {
