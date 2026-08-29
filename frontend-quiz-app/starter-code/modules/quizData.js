@@ -41,11 +41,17 @@ function quizMaker() {
   currentQuestionMaker();
   updateQuestionNumber();
 }
+function selectorChecker(e) {
+  answerSelectors.forEach((selector) =>
+    selector.setAttribute("aria-checked", "false"),
+  );
 
+  e.currentTarget.setAttribute("aria-checked", "true");
+}
 answerSelectors.forEach((selector) =>
   selector.addEventListener("click", (e) => {
     submitButton.setAttribute("data-status", "active");
-    e.currentTarget.setAttribute("aria-checked", "true");
+    selectorChecker(e);
   }),
 );
 

@@ -36,6 +36,7 @@ function isCorrect(selectedAnswer) {
 }
 
 function goNext(selectedAnswer) {
+  selectedAnswer.setAttribute("aria-checked", "false");
   selectedAnswer.classList.remove("right-answer-style");
   selectedAnswer.classList.remove("wrong-answer-style");
   answerSelectors.forEach((selector) => {
