@@ -4,6 +4,7 @@ import {
   quizMaker,
   submitButton,
 } from "./quizData.js";
+
 let questionCounter = Number(sessionStorage.getItem("question"));
 let rightAnswers = Number(sessionStorage.getItem("score"));
 

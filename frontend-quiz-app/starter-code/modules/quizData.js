@@ -1,4 +1,6 @@
 import { handleSubmit } from "./handleSubmit.js";
+import { progressUpdater } from "./progressUpdater.js";
+
 const question = document.querySelector("#question-body");
 const questionNumber = document.querySelector("#question-number");
 const answerSelectors = Array.from(
@@ -12,7 +14,6 @@ let category = sessionStorage.getItem("cat");
 
 function optionsMaker() {
   let i = 0;
-  console.log(questionCounter);
   answerSelectors.forEach((selector) => {
     selector.lastElementChild.innerText = questions[questionCounter].options[i];
     i++;
@@ -40,6 +41,7 @@ function quizMaker() {
   questionsFinder();
   currentQuestionMaker();
   updateQuestionNumber();
+  progressUpdater();
 }
 function selectorChecker(e) {
   answerSelectors.forEach((selector) =>
