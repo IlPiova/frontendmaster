@@ -157,7 +157,7 @@ main {
     font-weight: 500;
 }
 
-.submit-button[data-status="active"] {
+.submit-button[data-status="active"], .submit-button[id="play-again"] {
     background-color: var(--clr-accent);
 
 }
