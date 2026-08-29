@@ -40,13 +40,16 @@ function headerCategoryConstructor() {
         break;
     }
   }
+  document.documentElement.style.setProperty("color-scheme", "light");
+  sunIcon.setAttribute("src", "../assets/images/icon-sun-dark.svg");
+  moonIcon.setAttribute("src", "../assets/images/icon-moon-dark.svg");
 }
 
 function changeTheme() {
   if (themeChooser.checked) {
     document.documentElement.style.setProperty("color-scheme", "dark");
     sunIcon.setAttribute("src", "../assets/images/icon-sun-light.svg");
-    moonIcon.setAttribute("src", "../assets/images/icon-sun-light.svg");
+    moonIcon.setAttribute("src", "../assets/images/icon-moon-light.svg");
   } else {
     document.documentElement.style.setProperty("color-scheme", "light");
     sunIcon.setAttribute("src", "../assets/images/icon-sun-dark.svg");
