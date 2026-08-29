@@ -4,7 +4,7 @@ const categoryName = document.querySelector("#active-category");
 const themeChooser = document.querySelector("#theme-chooser");
 const sunIcon = document.querySelector("#sun-icon");
 const moonIcon = document.querySelector("#moon-icon");
-const categoryHeader = document.querySelector("#category-header");
+const categoryHeader = document.querySelector("#category-card");
 
 function headerCategoryConstructor() {
   if (categoryName) categoryName.innerText = "";
@@ -47,7 +47,7 @@ function changeTheme() {
     document.documentElement.style.setProperty("color-scheme", "dark");
     sunIcon.setAttribute(
       "src",
-      "/starter-code/assets/images/icon-moon-light.svg",
+      "/starter-code/assets/images/icon-sun-light.svg",
     );
     moonIcon.setAttribute(
       "src",

@@ -47,6 +47,39 @@ header {
         align-items: center;
         gap: 1rem;
     }
+
+    .theme-chooser #theme-chooser {
+        appearance: none;
+        position: relative;
+        inline-size: 3rem;
+        block-size: 1.5rem;
+        background-color: var(--clr-accent);
+        border-radius: 999px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .theme-chooser #theme-chooser::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        inline-size: 1.25rem;
+        block-size: 1.25rem;
+        border-radius: 50%;
+        background-color: white;
+        transform: translateX(0);
+        transition: transform 0.3s ease;
+        will-change: transform;
+    }
+
+    .theme-chooser #theme-chooser:checked {
+        background-color: var(--clr-accent);
+    }
+
+    .theme-chooser #theme-chooser:checked::after {
+        transform: translateX(1.5rem);
+    }
 }
 
 main {
