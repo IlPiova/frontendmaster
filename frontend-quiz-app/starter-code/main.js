@@ -1,8 +1,12 @@
 const categorySelectors = document.querySelectorAll(".option-selector");
 let category = "";
+let theme = sessionStorage.setItem("theme");
+
 sessionStorage.setItem("question", 0);
 sessionStorage.setItem("score", 0);
-sessionStorage.setItem("theme", "light");
+theme
+  ? sessionStorage.setItem("theme", theme)
+  : sessionStorage.setItem("theme", "light");
 
 function choosenCategory(e) {
   sessionStorage.removeItem("cat");

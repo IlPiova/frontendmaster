@@ -46,9 +46,11 @@ function headerCategoryConstructor() {
   }
 
   if (theme === "dark") {
+    themeChooser.setAttribute("checked", "");
     sunIcon.setAttribute("src", "../assets/images/icon-sun-light.svg");
     moonIcon.setAttribute("src", "../assets/images/icon-moon-light.svg");
   } else {
+    themeChooser.removeAttribute("checked");
     sunIcon.setAttribute("src", "../assets/images/icon-sun-dark.svg");
     moonIcon.setAttribute("src", "../assets/images/icon-moon-dark.svg");
   }

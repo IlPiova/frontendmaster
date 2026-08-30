@@ -7,7 +7,7 @@ import {
 
 let questionCounter = Number(sessionStorage.getItem("question"));
 let rightAnswers = Number(sessionStorage.getItem("score"));
-
+let correctnessDisplay;
 export function handleSubmit() {
   if (submitButton.getAttribute("data-status") === "disabled") return;
   submitButton.setAttribute("data-status", "disabled");
@@ -15,12 +15,13 @@ export function handleSubmit() {
     if (selector.ariaChecked === "true") return selector;
   });
   isCorrect(selectedAnswer[0]);
-  let correctnessDisplay = setTimeout(() => goNext(selectedAnswer[0]), 1000);
+  correctnessDisplay = setTimeout(() => goNext(selectedAnswer[0]), 1000);
+  correctnessDisplay();
 }
 
 function isCorrect(selectedAnswer) {
   let correctAnswer = questions[questionCounter].answer;
-  if (correctAnswer == selectedAnswer.lastElementChild.innerText) {
+  if (correctAnswer === selectedAnswer.lastElementChild.innerText) {
     selectedAnswer.classList.add("right-answer-style");
     rightAnswers++;
     sessionStorage.setItem("score", rightAnswers);
@@ -35,6 +36,7 @@ function isCorrect(selectedAnswer) {
 }
 
 function goNext(selectedAnswer) {
+  clearTimeout(correctnessDisplay);
   selectedAnswer.setAttribute("aria-checked", "false");
   selectedAnswer.classList.remove("right-answer-style");
   selectedAnswer.classList.remove("wrong-answer-style");

@@ -41,10 +41,12 @@ function updateQuestionNumber() {
 
 function quizMaker() {
   questionCounter = Number(sessionStorage.getItem("question"));
-  questionsFinder();
-  currentQuestionMaker();
-  updateQuestionNumber();
-  progressUpdater();
+  if (fetchedData) {
+    questionsFinder();
+    currentQuestionMaker();
+    updateQuestionNumber();
+    progressUpdater();
+  }
 }
 function selectorChecker(e) {
   answerSelectors.forEach((selector) =>
