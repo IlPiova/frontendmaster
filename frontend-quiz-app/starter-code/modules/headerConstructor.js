@@ -8,7 +8,7 @@ const categoryCard = document.querySelector("#category-card");
 
 let theme = sessionStorage.getItem("theme");
 
-export function setcategoryIcon() {
+export function setCategoryIcon() {
   switch (category) {
     case "HTML":
       categoryIcon.setAttribute("src", "./assets/images/icon-html.svg");

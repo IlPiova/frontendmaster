@@ -1,4 +1,4 @@
-import { setcategoryIcon } from "./headerConstructor.js";
+import { setCategoryIcon } from "./headerConstructor.js";
 
 let category = sessionStorage.getItem("cat");
 let score = sessionStorage.getItem("score");
@@ -17,7 +17,7 @@ function displayScore() {
 
 function categoryDisplay() {
   categoryCard.innerText = category;
-  setcategoryIcon();
+  setCategoryIcon();
 }
 
 button.addEventListener(
