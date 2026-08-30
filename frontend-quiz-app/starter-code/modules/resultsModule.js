@@ -1,9 +1,13 @@
+import { setcategoryIcon } from "./headerConstructor.js";
+
 let category = sessionStorage.getItem("cat");
 let score = sessionStorage.getItem("score");
+let theme = sessionStorage.getItem("theme");
+
+const categoryIcon = document.querySelector("#body-active-icon");
 const categoryCard = document.querySelector("#body-active-category");
 const result = document.querySelector("#result");
 const button = document.querySelector("#play-again");
-let theme = sessionStorage.getItem("theme");
 
 document.documentElement.style.setProperty("color-scheme", theme);
 
@@ -13,6 +17,7 @@ function displayScore() {
 
 function categoryDisplay() {
   categoryCard.innerText = category;
+  setcategoryIcon();
 }
 
 button.addEventListener(
