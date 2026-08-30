@@ -17,7 +17,7 @@ function displayScore() {
 
 function categoryDisplay() {
   categoryCard.innerText = category;
-  setCategoryIcon();
+  setCategoryIcon("#body-active-icon");
 }
 
 button.addEventListener(

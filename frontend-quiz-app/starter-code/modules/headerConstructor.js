@@ -8,28 +8,26 @@ const categoryCard = document.querySelector("#category-card");
 
 let theme = sessionStorage.getItem("theme");
 
-export function setCategoryIcon() {
+export function setCategoryIcon(str) {
+  const icon = document.querySelector(str);
   switch (category) {
     case "HTML":
-      categoryIcon.setAttribute("src", "./assets/images/icon-html.svg");
-      categoryIcon.classList.add("html-icon");
+      icon.setAttribute("src", "./assets/images/icon-html.svg");
+      icon.classList.add("html-icon");
       break;
     case "CSS":
-      categoryIcon.setAttribute("src", "./assets/images/icon-css.svg");
-      categoryIcon.classList.add("css-icon");
+      icon.setAttribute("src", "./assets/images/icon-css.svg");
+      icon.classList.add("css-icon");
 
       break;
     case "Javscript":
-      categoryIcon.setAttribute("src", "./assets/images/icon-javascript.svg");
-      categoryIcon.classList.add("js-icon");
+      icon.setAttribute("src", "./assets/images/icon-javascript.svg");
+      icon.classList.add("js-icon");
 
       break;
     case "Accessibility":
-      categoryIcon.setAttribute(
-        "src",
-        "./assets/images/icon-accessibility.svg",
-      );
-      categoryIcon.classList.add("accessibility-icon");
+      icon.setAttribute("src", "./assets/images/icon-accessibility.svg");
+      icon.classList.add("accessibility-icon");
 
       break;
 
@@ -44,7 +42,7 @@ function headerCategoryConstructor() {
     categoryIcon.classList.remove(categoryIcon.classList[1]);
   if (category && categoryName) {
     categoryName.innerText = category;
-    setCategoryIcon();
+    setCategoryIcon("#category-icon");
   }
 
   if (theme === "dark") {
