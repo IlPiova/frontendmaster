@@ -4,7 +4,7 @@ const categoryName = document.querySelector("#active-category");
 const themeChooser = document.querySelector("#theme-chooser");
 const sunIcon = document.querySelector("#sun-icon");
 const moonIcon = document.querySelector("#moon-icon");
-const categoryHeader = document.querySelector("#category-card");
+const categoryCard = document.querySelector("#category-card");
 
 let theme = sessionStorage.getItem("theme");
 
@@ -42,6 +42,14 @@ function headerCategoryConstructor() {
         break;
     }
   }
+
+  if (theme === "dark") {
+    sunIcon.setAttribute("src", "../assets/images/icon-sun-light.svg");
+    moonIcon.setAttribute("src", "../assets/images/icon-moon-light.svg");
+  } else {
+    sunIcon.setAttribute("src", "../assets/images/icon-sun-dark.svg");
+    moonIcon.setAttribute("src", "../assets/images/icon-moon-dark.svg");
+  }
 }
 
 function changeTheme() {
@@ -59,8 +67,8 @@ function changeTheme() {
     moonIcon.setAttribute("src", "../assets/images/icon-moon-dark.svg");
   }
 }
-if (categoryHeader) {
-  categoryHeader.addEventListener(
+if (categoryCard) {
+  categoryCard.addEventListener(
     "click",
     () => (window.location.href = "../index.html"),
   );

@@ -1,64 +1,56 @@
-  /* main {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 5rem
-  } */
+ .question-section {
+     inline-size: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: flex-start;
+     gap: 1.5rem;
+ }
 
-  .question-section {
-      inline-size: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 1.5rem;
-  }
+ .question-body {
+     font-size: 1.2rem;
+     font-weight: 500;
+ }
 
-  .question-body {
-      font-size: 1.2rem;
-      font-weight: 500;
-  }
+ .progressbar {
+     background-color: var(--clr-option);
+     inline-size: 100%;
+     block-size: 1rem;
+     border-radius: 999px;
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
 
-  .progressbar {
-      background-color: var(--clr-option);
-      inline-size: 100%;
-      block-size: 1rem;
-      border-radius: 999px;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
+     .active-progress-bar {
+         background-color: var(--clr-accent);
+         block-size: .5rem;
+         border-radius: 999px;
+     }
+ }
 
-      .active-progress-bar {
-          background-color: var(--clr-accent);
-          block-size: .5rem;
-          border-radius: 999px;
-      }
-  }
+ .answer-index-container {
+     min-inline-size: 40px;
+     min-block-size: 40px;
+     border-radius: 6px;
+     background-color: var(--clr-index-bg);
+     display: flex;
+     justify-content: center;
+     align-items: center;
 
-  .answer-index-container {
-      min-inline-size: 40px;
-      min-block-size: 40px;
-      border-radius: 6px;
-      background-color: var(--clr-index-bg);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+     .answer-index {
+         font-size: 1.2rem;
+         font-weight: 500;
+         color: #313E51;
+     }
+ }
 
-      .answer-index {
-          font-size: 1.2rem;
-          font-weight: 500;
-          color: #313E51;
-      }
-  }
-
-  .submit-button {
-      background-color: var(--clr-accent);
-      color: white;
-      inline-size: 100%;
-      border-radius: .8rem;
-      border: none;
-      padding: 1rem;
-      font-size: 1.2rem;
-      font-weight: 500;
-  }
+ .submit-button {
+     background-color: var(--clr-accent);
+     color: white;
+     inline-size: 100%;
+     border-radius: .8rem;
+     border: none;
+     padding: 1rem;
+     font-size: 1.2rem;
+     font-weight: 500;
+ }

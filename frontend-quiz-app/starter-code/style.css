@@ -256,10 +256,12 @@ main {
 @media screen and (width> 1080px) {
     body {
         background-image: light-dark(url("./assets/images/pattern-background-desktop-light.svg"), url("./assets/images/pattern-background-desktop-dark.svg"));
+        padding: 4rem 8rem;
     }
 
     main {
         flex-direction: row;
         gap: 8rem;
+
     }
 }
