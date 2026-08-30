@@ -11,6 +11,9 @@ let questionCounter = sessionStorage.getItem("question");
 let fetchedData = JSON.parse(sessionStorage.getItem("data"));
 let questions = [];
 let category = sessionStorage.getItem("cat");
+let theme = sessionStorage.getItem("theme");
+
+document.documentElement.style.setProperty("color-scheme", theme);
 
 function optionsMaker() {
   let i = 0;
