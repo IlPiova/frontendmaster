@@ -20,7 +20,7 @@ export function setCategoryIcon(str) {
       icon.classList.add("css-icon");
 
       break;
-    case "Javscript":
+    case "JavaScript":
       icon.setAttribute("src", "./assets/images/icon-javascript.svg");
       icon.classList.add("js-icon");
 
@@ -38,7 +38,7 @@ export function setCategoryIcon(str) {
 
 function headerCategoryConstructor() {
   if (categoryName) categoryName.innerText = "";
-  if (categoryIcon && categoryIcon.classList - length > 1)
+  if (categoryIcon && categoryIcon.classList.length > 1)
     categoryIcon.classList.remove(categoryIcon.classList[1]);
   if (category && categoryName) {
     categoryName.innerText = category;

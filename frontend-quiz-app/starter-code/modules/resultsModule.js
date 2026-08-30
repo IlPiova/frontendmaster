@@ -4,7 +4,7 @@ let category = sessionStorage.getItem("cat");
 let score = sessionStorage.getItem("score");
 let theme = sessionStorage.getItem("theme");
 
-const categoryIcon = document.querySelector("#body-active-icon");
+const categoryIcon = document.querySelector("#body-category-icon");
 const categoryCard = document.querySelector("#body-active-category");
 const result = document.querySelector("#result");
 const button = document.querySelector("#play-again");
@@ -17,7 +17,7 @@ function displayScore() {
 
 function categoryDisplay() {
   categoryCard.innerText = category;
-  setCategoryIcon("#body-active-icon");
+  setCategoryIcon("#body-category-icon");
 }
 
 button.addEventListener(
