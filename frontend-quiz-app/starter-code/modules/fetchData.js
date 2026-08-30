@@ -4,7 +4,7 @@ data = await fetch("../data.json").then((response) => {
   if (response.ok) {
     return response.json();
   } else {
-    throw new Error("Errore caricamento dati");
+    throw new Error("Errore");
   }
 });
 let fetchedData = data.quizzes;

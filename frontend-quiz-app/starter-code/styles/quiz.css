@@ -48,12 +48,13 @@
       .answer-index {
           font-size: 1.2rem;
           font-weight: 500;
+          color: #313E51;
       }
   }
 
   .submit-button {
       background-color: var(--clr-accent);
-      color: var(--clr-option);
+      color: white;
       inline-size: 100%;
       border-radius: .8rem;
       border: none;

@@ -24,6 +24,7 @@ function optionsMaker() {
 }
 
 function questionsFinder() {
+  console.log(fetchedData);
   for (let i = 0; i < fetchedData.length; i++) {
     if (category !== fetchedData[i].title) continue;
     questions = fetchedData[i].questions;
