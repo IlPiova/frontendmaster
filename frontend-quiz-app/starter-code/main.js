@@ -1,6 +1,6 @@
 const categorySelectors = document.querySelectorAll(".option-selector");
 let category = "";
-let theme = sessionStorage.setItem("theme");
+let theme = sessionStorage.getItem("theme");
 
 sessionStorage.setItem("question", 0);
 sessionStorage.setItem("score", 0);
