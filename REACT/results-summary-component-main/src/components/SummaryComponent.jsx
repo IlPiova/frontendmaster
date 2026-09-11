@@ -6,12 +6,11 @@ function SummaryComponent() {
 
   // Fetching data
   useEffect(() => {
-    fetch("./data.json")
+    fetch("../../public/data.json")
       .then((result) => result.json())
       .then((json) => setData(json));
   }, []);
   console.log(data);
-
   return (
     <div className="secondary-section">
       <h1 className="title">Your result</h1>

@@ -1,0 +1,46 @@
+// Variables
+/* BG Colors */
+$head-bg: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+$circle-bg: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+
+/* Results colors */
+$reaction-color: hsl(0, 100%, 67%);
+$reaction-bg-color: hsla(0, 100%, 67%, 0.2);
+$memory-color: hsl(39, 100%, 56%);
+$memory-bg-color: hsla(39, 100%, 56%, 0.2);
+$verbal-color: hsl(166, 100%, 37%);
+$verbal-bg-color: hsla(166, 100%, 37%, 0.2);
+$visual-color: hsl(234, 85%, 45%);
+$visual-bg-color: hsla(234, 85%, 45%, 0.2);
+
+/* Neutral colors */
+$card-bg-color: hsl(0, 0%, 100%);
+$body-bg-color: hsl(221, 100%, 96%);
+
+/* Text variables */
+$text:
+  500 1.2rem "Hanken Grotesk",
+  sans-serif;
+$text-medium:
+  700 1.8rem "Hanken Grotesk",
+  sans-serif;
+$important-text:
+  800 2rem "Hanken Grotesk",
+  sans-serif;
+$text-color: hsl(241, 100%, 89%);
+$important-text-color: hsl(224, 30%, 27%);
+
+// Extends
+
+%vertical-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+%horizontal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
