@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import CategoryItem from "./CategoryItem";
 
 function SummaryComponent() {
-  const [data, setData] = useState("");
+  const [data, setData] = useState([]);
 
   // Fetching data
   useEffect(() => {
@@ -14,8 +14,8 @@ function SummaryComponent() {
     <div className="secondary-section">
       <h1 className="title">Your result</h1>
       <div className="categories-container">
-        {data.map((category) => (
-          <CategoryItem category={category} />
+        {data.map((result) => (
+          <CategoryItem key={result.category} category={result} />
         ))}
       </div>
 

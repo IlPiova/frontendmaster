@@ -1,4 +1,4 @@
-function CategoryItem(category) {
+function CategoryItem({ category }) {
   return (
     <div className="category-container">
       <img src={category.icon} alt="category-icon" />
