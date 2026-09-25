@@ -19,7 +19,7 @@ $body-bg-color: hsl(221, 100%, 96%);
 
 /* Text variables */
 $text:
-  500 1.2rem "Hanken Grotesk",
+  500 1rem "Hanken Grotesk",
   sans-serif;
 $text-medium:
   700 1.8rem "Hanken Grotesk",
@@ -37,10 +37,14 @@ $important-text-color: hsl(224, 30%, 27%);
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 %horizontal-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+  padding: 1rem;
 }

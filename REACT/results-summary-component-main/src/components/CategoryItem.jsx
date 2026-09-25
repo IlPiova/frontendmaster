@@ -1,12 +1,12 @@
 function CategoryItem({ category }) {
   return (
-    <div className="category-container">
+    <div className="category-container" id={category.category}>
       <img src={category.icon} alt="category-icon" />
       <p className="category">{category.category}</p>
-      <div className="category-result-container">
-        <p className="result">{category.score}</p>
-        <p className="sub-text">/100</p>
-      </div>
+      <p className="result">
+        {category.score}
+        <span className="sub-text"> / 100</span>
+      </p>
     </div>
   );
 }

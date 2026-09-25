@@ -3,8 +3,153 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  font: $text;
 }
 .home {
-  @extend vertical-container;
+  @extend %vertical-container;
   background-color: $body-bg-color;
+  padding: 0;
+}
+// Score component
+.primary-section {
+  @extend %vertical-container;
+  text-align: center;
+  background: $head-bg;
+  border-end-start-radius: 2rem;
+  border-end-end-radius: 2rem;
+  padding-block: 2rem;
+  padding-inline: 2em;
+  gap: 1.2rem;
+  .secondary-title {
+    color: $text-color;
+    inline-size: 55%;
+  }
+  .score-container {
+    @extend %vertical-container;
+    gap: 0.5rem;
+    padding: 2rem;
+    inline-size: fit-content;
+    block-size: fit-content;
+    aspect-ratio: 1;
+    text-align: center;
+    border-radius: 50%;
+    background: $circle-bg;
+    color: white;
+
+    .final-score {
+      font: $important-text;
+
+      .secondary-text {
+        font-size: 1.2rem;
+        color: $text-color;
+      }
+    }
+  }
+  .result {
+    font: $text-medium;
+    color: white;
+  }
+  .result-description {
+    font-size: 1rem;
+    color: $text-color;
+  }
+}
+
+// Summary component
+.secondary-section {
+  @extend %vertical-container;
+  gap: 1.2rem;
+  align-items: stretch;
+  justify-content: space-between;
+  padding-inline: 2rem;
+  inline-size: 100%;
+  .categories-container {
+    @extend %vertical-container;
+    padding: 0;
+    align-items: stretch;
+  }
+}
+
+.submit-button {
+  width: 100%;
+  padding-block: 1em;
+  border-radius: 2em;
+  background-color: $important-text-color;
+  font: $text;
+  color: white;
+  border: none;
+}
+
+//Category item
+.category-container {
+  @extend %horizontal-container;
+  justify-content: flex-start;
+  gap: 0.8em;
+  padding: 0.8em;
+  border-radius: 0.5em;
+  .result {
+    margin-inline-start: auto;
+    color: $important-text-color;
+    .sub-text {
+      color: grey;
+    }
+  }
+}
+#Reaction {
+  background-color: $reaction-bg-color;
+  .category {
+    color: $reaction-color;
+  }
+}
+
+#Memory {
+  background-color: $memory-bg-color;
+  .category {
+    color: $memory-color;
+  }
+}
+
+#Verbal {
+  background-color: $verbal-bg-color;
+  .category {
+    color: $verbal-color;
+  }
+}
+
+#Visual {
+  background-color: $visual-bg-color;
+  .category {
+    color: $visual-color;
+  }
+}
+
+@media screen and (width>720px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inline-size: 100%;
+    block-size: 100vb;
+  }
+  .home {
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: $card-bg-color;
+    border-radius: 2rem;
+    margin-block-end: 2em;
+
+    .primary-section {
+      border-radius: 2rem;
+      height: 100%;
+    }
+
+    .submit-button:focus,
+    .submit-button:hover,
+    .submit-button:active {
+      background: $head-bg;
+      cursor: pointer;
+      outline: none;
+    }
+  }
 }

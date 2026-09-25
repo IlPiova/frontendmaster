@@ -3,8 +3,10 @@ function ScoreComponent() {
     <div className="primary-section">
       <h1 className="secondary-title">Your result</h1>
       <div className="score-container">
-        <p className="final-score">76</p>
-        <p className="secondary-text">/100</p>
+        <p className="final-score">
+          76 <br />
+          <span className="secondary-text"> of 100</span>
+        </p>
       </div>
       <h2 className="result">Great</h2>
       <p className="result-description">

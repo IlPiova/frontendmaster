@@ -12,7 +12,7 @@ function SummaryComponent() {
   }, []);
   return (
     <div className="secondary-section">
-      <h1 className="title">Your result</h1>
+      <h1 className="title">Summary</h1>
       <div className="categories-container">
         {data.map((result) => (
           <CategoryItem key={result.category} category={result} />
